@@ -1,4 +1,4 @@
-<td class=l rowspan="2"><img border='0' src="{dpath}premium/{img_big}.jpg" align='top' width='120' height='120'></td>
+<td class=l rowspan="2"><img border='0' src="{dpath}premium/{img_big}.gif" align='top' width='120' height='120'></td>
 
 				<td class=l rowspan="2"><b>{off_name}</b>(<b>
 				{off_status}</b>)<br>

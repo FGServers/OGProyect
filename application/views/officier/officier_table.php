@@ -6,11 +6,11 @@
 		  <td colspan="3" class="c">{Darkmatter}</td>
 	</tr>
 	<tr>
-		<td class=l><img border='0' src="{dpath}premium/DMaterie.jpg" align='top' width='120' height='120'>
+		<td class=l><img border='0' src="{dpath}premium/DMaterie.gif" align='top' width='120' height='120'>
 		</td>
 		<td class=l><strong>{Darkmatter}</strong><br>
 				{of_darkmatter_description}							<div style="margin:4px 4px;">
-				<table><tr><td><img src="{dpath}premium/dm_klein_1.jpg" width="32" height="32" style="vertical-align:middle;"></td>
+				<table><tr><td><img src="{dpath}premium/dm_klein_1.gif" width="32" height="32" style="vertical-align:middle;"></td>
 				<td style='background-color:transparent;'><strong style="color:skyblue; vertical-align:middle;">{of_darkmatter_description_short}</strong></td></tr></table>
 				</div></td>
 			<td class=l style="width:90px;text-align:center; vertical-align:middle;">
