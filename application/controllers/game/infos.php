@@ -612,28 +612,22 @@ class Infos extends OGPCore
 
     private function ShowRapidFireTo()
     {
-        $ResultString = '';
-
-        for ($type = 200; $type < 500; $type++)
+        $ResultString = "";
+        for ($Type = 200; $Type < 500; $Type++)
         {
-            if ( isset ( $this->_combat_caps[$this->_element_id]['sd'][$type] ) > 1  )
-            {
-                $ResultString .= $this->_lang['in_rf_again']. " ". $this->_lang['tech'][$type] ." <font color=\"#00ff00\">".$this->_combat_caps[$this->_element_id]['sd'][$type]."</font><br>";
-            }
+            if ( $this->_combat_caps[$this->_element_id]['sd'][$Type] > 1 )
+                $ResultString .= $this->_lang['in_rf_again']. " ". $this->_lang['tech'][$Type] ." <font color=\"#00ff00\">".$this->_combat_caps[$this->_element_id]['sd'][$Type]."</font><br>";
         }
         return $ResultString;
     }
 
     private function ShowRapidFireFrom()
     {
-        $ResultString = '';
-        
-        for ($type = 200; $type < 500; $type++)
+        $ResultString = "";
+        for ($Type = 200; $Type < 500; $Type++)
         {
-            if ( isset ( $this->_combat_caps[$type]['sd'][$this->_element_id] ) > 1 )
-            {
-                 $ResultString .= $this->_lang['in_rf_from']. " ". $this->_lang['tech'][$type] ." <font color=\"#ff0000\">".$this->_combat_caps[$type]['sd'][$this->_element_id]."</font><br>";
-            }
+            if ( $this->_combat_caps[$Type]['sd'][$this->_element_id] > 1 )
+                $ResultString .= $this->_lang['in_rf_from']. " ". $this->_lang['tech'][$Type] ." <font color=\"#ff0000\">".$this->_combat_caps[$Type]['sd'][$this->_element_id]."</font><br>";
         }
         return $ResultString;
     }
