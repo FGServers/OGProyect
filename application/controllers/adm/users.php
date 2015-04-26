@@ -1348,7 +1348,7 @@ class Users extends OGPCore
 	private function build_image_combo ( $current_image )
 	{
 		$images_dir 	= opendir ( OGP_ROOT . DEFAULT_SKINPATH . 'planets' );
-		$exceptions		= array ( '.' , '..' , '.htaccess' , 'index.html' , '.DS_Store' , 'small' , );
+		$exceptions		= array ( '.' , '..' , '.htaccess' , 'index.html' , '.DS_Store', );
 		$images_options	= '';
 
 		while ( ( $image_dir = readdir ( $images_dir ) ) !== FALSE )
@@ -1456,7 +1456,7 @@ class Users extends OGPCore
 	private function planets_table ( $planets_data )
 	{
 		$parse					= $this->_lang;
-		$parse['image_path']	= DEFAULT_SKINPATH . "planets/small/s_";
+		$parse['image_path']	= DEFAULT_SKINPATH . "planets/";
 		$parse['user']			= $this->_user_query['user_name'];
 		$template 				= parent::$page->get_template ( "adm/users_planets_table_view" );
 		$prepare_table			= '';
@@ -1472,7 +1472,7 @@ class Users extends OGPCore
 			{
 				$parse['moon_id']		= $planets['moon_id'];
 				$parse['moon_name']		= str_replace ( '%s' , $planets['moon_name'] , $this->_lang['us_user_moon_title'] );
-				$parse['moon_image']	= "<img src=\"{$parse['image_path']}{$planets['moon_image']}.jpg\" alt=\"{$planets['moon_image']}.jpg\" title=\"{$planets['moon_image']}.jpg\" border=\"0\">";
+				$parse['moon_image']	= "<img src=\"{$parse['image_path']}{$planets['moon_image']}.jpg\" alt=\"{$planets['moon_image']}.jpg\" height=\"50\" width=\"50\" title=\"{$planets['moon_image']}.jpg\" border=\"0\">";
 			}
 
 			$prepare_table	   	   .= parent::$page->parse_template ( $template , $parse );
@@ -1489,7 +1489,7 @@ class Users extends OGPCore
 	private function moons_table ( $moons_data )
 	{
 		$parse					= $this->_lang;
-		$parse['image_path']	= DEFAULT_SKINPATH . 'planets/small/s_';
+		$parse['image_path']	= DEFAULT_SKINPATH . 'planets/';
 		$parse['user']			= $this->_user_query['user_name'];
 		$template 				= parent::$page->get_template ( 'adm/users_moons_table_view' );
 		$prepare_table			= '';

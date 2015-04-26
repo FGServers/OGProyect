@@ -1,7 +1,7 @@
 <tr>
 	<td width="50%">
 		{moon_name} {moon_status}<br />
-		<img src="{image_path}{moon_image}.jpg" alt="{moon_image}.jpg" title="{moon_image}.jpg" border="0">
+		<img src="{image_path}{moon_image}.jpg" alt="{moon_image}.jpg" title="{moon_image}.jpg" border="0" height="50" width="50">
 	</td>
 	<td width="50%">
 		<div class="btn-group">
