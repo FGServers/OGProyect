@@ -260,26 +260,30 @@ class Research extends OGPCore
 		$return				= TRUE;
 		$current_building	= '';
 		$element_id			= 0;
+		$i 					= 0;
 
 		if ( $this->_current_planet['planet_b_building_id'] != 0 )
 		{
 			$current_queue	= $this->_current_planet['planet_b_building_id'];
 
 			if ( strpos ( $current_queue , ';' ) )
-			{
-				$queue	= explode ( ';' , $current_queue );
+			{	
+				if(isset($arreglo[$i])){
 
-				for ( $i = 0 ; $i < MAX_BUILDING_QUEUE_SIZE ; $i++ )
-				{
-					$element_data	= explode ( "," , $queue[$i] );
-					$element_id		= $element_data[0];
+					$queue	= explode ( ';' , $current_queue );
 
-					if ( $element_id == 31 )
+					for ( $i = 0 ; $i < MAX_BUILDING_QUEUE_SIZE ; $i++ )
 					{
-						break;
+						$element_data	= explode ( "," , $queue[$i] );
+						$element_id		= $element_data[0];
+
+						if ( $element_id == 31 )
+						{
+							break;
+						}
 					}
 				}
-			}
+			} 
 			else
 			{
 				$current_building	= $current_queue;
