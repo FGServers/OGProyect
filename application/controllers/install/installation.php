@@ -322,7 +322,7 @@ class Installation extends OGPCore
 		require_once ( OGP_ROOT . 'install/databaseinfos.php' );
 
 		$status['aks']				= parent::$db->query ( $table_acs_fleets ); // TABLE ACS_FLEETS
-		$status['alliance']			= parent::$db->query ( $table_alliance );
+		$status['alliance']			= parent::$db->query ( $QryTableAlliance );
 		$status['alliance']			= parent::$db->query ( $table_alliance_statistics ); // TABLE ALLIANCE_STATISTICS
 		$status['banned']			= parent::$db->query ( $table_banned ); // TABLE BANNED
 		$status['buddy']			= parent::$db->query ( $table_buddys ); // TABLE BUDDYS
@@ -331,7 +331,7 @@ class Installation extends OGPCore
 		$status['fleets']			= parent::$db->query ( $table_fleets ); // TABLE FLEETS
 		$status['messages']			= parent::$db->query ( $table_messages ); // TABLE MESSAGES
 		$status['notes']			= parent::$db->query ( $table_notes ); // TABLE NOTES
-		$status['planets']			= parent::$db->query ( $table_planets );
+		$status['planets']			= parent::$db->query ( $QryTablePlanets );
 		$status['premium']			= parent::$db->query ( $table_premium ); // TABLE PREMIUM
 		$status['research']			= parent::$db->query ( $table_research ); // TABLE RESEARCH
 		$status['rw']				= parent::$db->query ( $table_reports ); // TABLE REPORTS
@@ -389,6 +389,7 @@ class Installation extends OGPCore
 								`user_password` = '". $adm_pass ."';" );
 
 		parent::$db->query ( "INSERT INTO " . PLANETS . " SET
+								`name` = 'Planeta Principal',
 								`id_owner` = '1',
 								`galaxy` = '1',
 								`system` = '1',
@@ -420,7 +421,7 @@ class Installation extends OGPCore
 								`premium_user_id` = '1';" );
 
 		parent::$db->query ( "INSERT INTO " . SETTINGS . " SET
-										`setting_user_id` = '1';" );
+								`setting_user_id` = '1';" );
 
 		parent::$db->query ( "INSERT INTO " . BUILDINGS . " SET
 								`building_planet_id` = '1';" );
