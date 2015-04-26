@@ -150,6 +150,7 @@ class Shipyard extends OGPCore
 			}
 
 			$CurrentBuilding = '';
+			$Element = '';
 			
 			if ( ( ( $CurrentBuilding == 21 ) or ( $CurrentBuilding == 14 ) or ( $CurrentBuilding == 15 ) ) or  (($Element == 21 ) or ( $Element == 14 ) or ( $Element == 15 )) ) // ADDED (or $Element == 21) BY LUCKY
 			{
