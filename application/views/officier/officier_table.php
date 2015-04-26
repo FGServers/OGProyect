@@ -6,7 +6,7 @@
     	<div id="headtext2" style="position:relative;float:right;top:23px;left:-240px;font-size:13px;font-weight:bold;color:#c2f1fd;">{of_text_all}</div>
     </div>	
 	<tr>
-		  <td colspan="3" class="c">{Darkmatter}</td>
+		  <td colspan="3" class="c">{Darkmatter} ({darkmetter_amount})</td>
 	</tr>
 	<tr>
 		<td class=l><img border='0' src="{dpath}premium/DMaterie.gif" align='top' width='120' height='120'>
