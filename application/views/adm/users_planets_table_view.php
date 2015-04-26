@@ -4,7 +4,7 @@
 			<tr>
 				<td width="50%">
 					{planet_name} {planet_status}<br />
-					<img src="{image_path}{planet_image}.jpg" alt="{planet_image}.jpg" title="{planet_image}.jpg" border="0">
+					<img src="{image_path}{planet_image}.jpg" alt="{planet_image}.jpg" title="{planet_image}.jpg" border="0" height="50" width="50">
 				</td>
 				<td width="50%">
 					{moon_name} {moon_status}<br />

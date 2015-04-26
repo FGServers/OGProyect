@@ -383,7 +383,8 @@ $lang['rs_engineer_bonus']					= '+10% de producción de energía';
 
 //----------------------------------------------------------------------------//
 //OFFICIERS
-$lang['of_title']							= 'Oficiales';
+$lang['of_title']							= 'Tus oficiales';
+$lang['of_title_data']						= 'Con los oficiales podés llevar a tu imperio a unas dimensiones de las que nunca soñaste. ¡Todo lo que necesitás es algo de materia oscura y tus trabajadores y consejeros trabajarán incluso más!';
 $lang['of_recruit']							= 'Reclutar';
 $lang['of_active']							= 'Activo hasta el';
 $lang['of_inactive']						= 'Inactivo';
@@ -759,9 +760,9 @@ $lang['info'][503]['description'] 			= "Los misiles interplanetarios destruyen l
 // -------------------------- OFFICIERS ----------------------------------------------------------------------------------------------------//
 $lang['info'][601]['description'] 			= 'Lista de construcción, Visión del imperio, Vista de galaxia mejorada, Filtro de mensajes, Accesos directos, Sin publicidad';
 $lang['info'][602]['description'] 			= '+2 huecos de flota máximos';
-$lang['info'][603]['description'] 			= 'Minimiza las perdidas de las defensas a la mitad,<br />+10% de producción de energía';
+$lang['info'][603]['description'] 			= 'Minimiza las perdidas de las defensas a la mitad,<br/>+10% de producción de energía';
 $lang['info'][604]['description'] 			= '+10% producción de minas';
-$lang['info'][605]['description'] 			= '+2 al nivel de espionaje,<br />25% menos tiempo de investigación';
+$lang['info'][605]['description'] 			= '+2 al nivel de espionaje,<br/>25% menos tiempo de investigación';
 
 //----------------------------------------------------------------------------//
 //MESSAGES

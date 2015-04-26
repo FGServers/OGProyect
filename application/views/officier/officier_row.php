@@ -1,7 +1,6 @@
 <td class=l rowspan="2"><img border='0' src="{dpath}premium/{img_big}.gif" align='top' width='120' height='120'></td>
 
-				<td class=l rowspan="2"><b>{off_name}</b>(<b>
-				{off_status}</b>)<br>
+				<td class=l rowspan="2"><b>{off_name}</b> (<b>{off_status}</b>)<br>
 					{off_desc}							<div style="margin:4px 4px;">
 					<table>
 						<tr>

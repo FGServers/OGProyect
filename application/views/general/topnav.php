@@ -5,7 +5,7 @@
 <td class='header' style='width:5;' >
 	  <table class='header'>
     <tr class='header'>
-     <td class='header'><img src="{dpath}planets/small/s_{image}.jpg" height="50" width="50"></td>
+     <td class='header'><img src="{dpath}planets/{image}.jpg" height="50" width="50"></td>
      <td class='header'>
 	  <table class='header'>
 

@@ -105,6 +105,7 @@ class Officier extends OGPCore
 			$OfficierRowTPL				= parent::$page->get_template ( 'officier/officier_row' );
 			$parse['disp_off_tbl']		= '';
 			$parse['premium_pay_url']	= Functions_Lib::read_config ( 'premium_url' ) != '' ? Functions_Lib::read_config ( 'premium_url' ) : 'game.php?page=officier';
+			$parse['darkmetter_amount'] = $this->_current_user['premium_dark_matter'];
 
 			foreach ( $this->_lang['tech'] as $Element => $ElementName )
 			{
