@@ -755,9 +755,9 @@ $lang['info'][503]['description'] 			= "Interplanetary Missiles (IPM) are your o
 // -------------------------- OFFICIERS ----------------------------------------------------------------------------------------------------//
 $lang['info'][601]['description'] 			= 'Building queue, Empire view, Improved galaxy view, Message filter, Shortcuts, Advertisement free';
 $lang['info'][602]['description'] 			= '+2 max. fleet slots';
-$lang['info'][603]['description'] 			= 'Minimizes losses in half defenses,&lt;br&gt;+10% energy production';
+$lang['info'][603]['description'] 			= 'Minimizes losses in half defenses,<br/>+10% energy production';
 $lang['info'][604]['description'] 			= '+10% mine production';
-$lang['info'][605]['description'] 			= '+2 Espionage level,&lt;br&gt;25% Less time for research';
+$lang['info'][605]['description'] 			= '+2 Espionage level,<br/>25% Less time for research';
 //----------------------------------------------------------------------------//
 //MESSAGES
 $lang['mg_title']							= 'Messages';
