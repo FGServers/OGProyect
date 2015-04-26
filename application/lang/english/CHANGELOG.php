@@ -6,16 +6,28 @@ $lang['changelog']   = array(
 
 '1.0.1' => ' 13/05/2013
 - [Security]
-- Failed escape function value changed all the mysql_real_escape_string by mysqli_real_escape_string.
+- Error in function escape_value changed all the mysql_real_escape_string by mysqli_real_escape_string.
 
 - [Removed]
-- Language editor did not work and mess up all the code.
+- Language editor not working proper activation and ruffled all code.
+- Some images removed
+
+- [New]
+- The images were updated by the redesign.
+- New ads improvements for commander.
 
 - [Fix]
 - When installing either did not put the name of the main planet administrator.
 - When creating the account pulled sql error.
 - Bad language in Home.php.
 - Error when editing a user.
+- Let not post moons from the administrative panel.
+- Several bugs fixed E_NOTICES & E_WARNINGS.
+- He showed alinaza users to edit.
+- Do not display properly when enrollment when the alliance was edited.
+- Time and operators are not displayed in the messages to commander and no commander.
+- I kept delete messages commander mode.
+- Several bugs have been fixed in Shipyard, Defenses and Technology (by samurairukasu).
 ',
 
 '1.0 Beta 5' => ' 13/06/2013

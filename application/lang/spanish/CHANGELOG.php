@@ -9,7 +9,11 @@ $lang['changelog']   = array(
 - Error en la funcion escape_value cambiado todo los mysql_real_escape_string por mysqli_real_escape_string.
 
 - [Removido]
-- editor de lenguaje no servia y desordenaba todo el codigo.
+- editor de lenguaje no funcionaba corectamente y desordenaba todo el codigo.
+- Se eliminaron algunas imágenes.
+
+- [Novedades]
+- Se actualizaron las imagenes por las del rediseño.
 
 - [Fix]
 - Al instalar no colocaba bien el nombre del planeta principal del administrador.
@@ -22,6 +26,7 @@ $lang['changelog']   = array(
 - No mostraba correctamente la hora de inscripción cuando se editaba la alianza.
 - No se mostraba la hora y los operadores en los mensajes para comandante y no comandante.
 - No dejaba borrar los mensajes en modo comandante.
+- Se solucionaron varios errores en Hangar, Defensas y Tecnologias (by samurairukasu).
 ',
 
 '1.0 Beta 5' => ' 13/05/2013
