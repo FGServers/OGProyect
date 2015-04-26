@@ -1,7 +1,10 @@
 <br />
 <div id="content">
 	<table width=600>
-
+	<div id="header" style="background-image:url('{dpath}premium/kasino_600x120.jpg'); width:600px;height:120px;">
+	    <div id="headtext1" style="position:relative; top:25px; left:-160px;font-size:18px;font-weight:bold; color:f3d2b1;">{of_text}</div>
+    	<div id="headtext2" style="position:relative;float:right;top:23px;left:-240px;font-size:13px;font-weight:bold;color:#c2f1fd;">{of_text_all}</div>
+    </div>	
 	<tr>
 		  <td colspan="3" class="c">{Darkmatter}</td>
 	</tr>

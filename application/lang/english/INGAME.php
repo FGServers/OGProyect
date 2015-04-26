@@ -134,6 +134,8 @@ $lang['ov_planet_rename']					= 'rename';
 $lang['ov_planet_rename_action']			= 'rename';
 $lang['ov_abandon_planet_not_possible']		= 'It\'s not possible abandon a planet where are fleets moving';
 $lang['ov_fields']							= 'Fields';
+$lang['ov_commander_recruit']				= ' is looking for leaders...';
+$lang['ov_commander_recruit_get']			= '...get commander!';
 
 //----------------------------------------------------------------------------//
 //GALAXY
@@ -404,6 +406,9 @@ $lang['of_get_darkmatter']					= 'Get dark matter';
 $lang['of_months']							= '3 month for';
 $lang['of_week']							= '1 week for';
 $lang['of_only']							= 'only';
+$lang['of_text']							= 'An expert emperor ...';
+$lang['of_text_all']						= '... need wise <b><font size=4>counselors.</font></b>';
+
 //----------------------------------------------------------------------------//
 //TRADER
 $lang['tr_only_positive_numbers']			= 'You may only use positive numbers!';

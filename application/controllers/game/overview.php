@@ -105,6 +105,9 @@ class Overview extends OGPCore
 		$parse['galaxy_system'] 		= $this->_current_planet['system'];
 		$parse['galaxy_planet'] 		= $this->_current_planet['planet'];
 		$parse['user_rank'] 			= $this->get_user_rank();
+		$parse['server_name'] 			= Functions_Lib::read_config('game_name');
+		$parse['commander_ads']			= Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) ? 'combox_container_off' : 'combox_container';
+
 
 		// DISPLAY THE RESULT PAGE
 		parent::$page->display ( parent::$page->parse_template ( parent::$page->get_template ( 'overview/overview_body' ) , $parse ) );

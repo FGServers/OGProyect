@@ -132,6 +132,8 @@ $lang['ov_planet_rename']					= 'Nombrar';
 $lang['ov_planet_rename_action']			= 'Nombrar';
 $lang['ov_abandon_planet_not_possible']		= 'No es posible abandonar un planeta cuando hay flotas moviendose';
 $lang['ov_fields']							= 'Campos';
+$lang['ov_commander_recruit']				= ' esta en busca de lideres...';
+$lang['ov_commander_recruit_get']			= '...&iexcl;hazte comandante!';
 
 //----------------------------------------------------------------------------//
 //GALAXY
@@ -402,6 +404,8 @@ $lang['of_get_darkmatter']					= 'Obtener materia oscura';
 $lang['of_months']							= '3 meses por';
 $lang['of_week']							= '1 semana por';
 $lang['of_only']							= 'sólo';
+$lang['of_text']							= 'Un emperador experto ...';
+$lang['of_text_all']						= '... necesita sabios <b><font size=4>consejeros.</font></b>';
 
 //----------------------------------------------------------------------------//
 //TRADER
