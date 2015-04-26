@@ -19,7 +19,7 @@ if ( ! defined ( 'INSIDE' ) ) die ( header ( "location:../" ) ) ;
 	###########################################################################
 
 	// VERSION
-	define('SYSTEM_VERSION' 			, '3.0');
+	define('SYSTEM_VERSION' 			, '1.0.1');
 
 	// HOOKS
 	define('HOOKS_ENABLED'				, 'FALSE');
