@@ -33,7 +33,7 @@
 		     </td>
 
 		     <td align="center" width="85" class='header'>
-		      <img border="0" src="{dpath}resources/darkmatter.jpg" width="42" height="22" title="Dark Matter">
+		      <img border="0" src="{dpath}resources/darkmatter.gif" width="42" height="22" title="Dark Matter">
 		     </td>
 
 		     <td align="center" width="85" class='header'>
