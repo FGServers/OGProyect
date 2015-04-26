@@ -385,7 +385,8 @@ $lang['rs_engineer_bonus']					= '+10% energy production';
 
 //----------------------------------------------------------------------------//
 //OFFICIERS
-$lang['of_title']							= 'Officers';
+$lang['of_title']							= 'Your officers';
+$lang['of_title_data']						= 'With your officers you can lead your empire to a size beyond your wildest dreams - all you need is some Dark Matter and your workers and advisers will work even harder! ';
 $lang['of_recruit']							= 'Recruit';
 $lang['of_active']							= 'Active until';
 $lang['of_inactive']						= 'Inactive';

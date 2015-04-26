@@ -26,6 +26,9 @@
 		<tr>
 		  <td colspan="3" class="c">{of_title}</td>
 		</tr>
+		<tr>
+		  <th colspan="3">{of_title_data}</th>
+		</tr>
 		{disp_off_tbl}
     </table>
 </div>
