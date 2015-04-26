@@ -380,4 +380,5 @@ $QryTablePlanets    .= "`invisible_start_time` int(11) NOT NULL default '0', ";
 $QryTablePlanets    .= "PRIMARY KEY  (`id`) ";
 $QryTablePlanets    .= ") ENGINE=MyISAM;";
 
+
 ?>
