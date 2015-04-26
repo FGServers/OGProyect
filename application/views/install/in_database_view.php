@@ -14,7 +14,7 @@
 					<label>{ins_server_title}</label>
 					<input type="text" name="host" placeholder="{ins_ex_tag} localhost" value=""/>
 					<label>{ins_db_title}</label>
-					<input type="text" name="db" placeholder="{ins_ex_tag} xgproyect" value="">
+					<input type="text" name="db" placeholder="{ins_ex_tag} ogproyect" value="">
 					<label>{ins_user_title}</label>
 					<input type="text" name="user" placeholder="{ins_ex_tag} root" value="">
 					<label>{ins_password_title}</label>

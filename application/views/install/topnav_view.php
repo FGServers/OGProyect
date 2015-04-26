@@ -13,7 +13,7 @@ $(function() {
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </a>
-	          <a class="brand">XG Proyect</a>
+	          <a class="brand">OG Proyect</a>
 	          <div class="nav-collapse collapse">
 	            <p class="navbar-text pull-right">
 	              <div style="float:right;height:0px;padding:0px;margin:0px">	

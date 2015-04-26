@@ -6,7 +6,7 @@
 			<br />
 			<div align="center">
 				<div style="overflow-x:auto;overflow-y:visible;width:100%;height:470px;text-align:justify;">
-					<h2>XG Proyect&#153; License</h2>
+					<h2>OG Proyect&#153; License</h2>
 					<div dir="ltr">
 					<h3 style="text-align: center;">GNU GENERAL PUBLIC LICENSE</h3>
 					<p style="text-align: center;">Version 3, 29 June 2007</p>

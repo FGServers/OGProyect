@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="language" content="es">
-    <meta name="author" content="XG Proyect">
-    <meta name="publisher" content="XG Proyect">
-    <meta name="copyright" content="XG Proyect">
+    <meta name="author" content="OG Proyect">
+    <meta name="publisher" content="OG Proyect">
+    <meta name="copyright" content="OG Proyect">
     <meta name="audience" content="all">
     <meta name="Expires" content="never">
     <meta name="Keywords" content="{hm_keywords}">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="{js_path}jquery.jparallax.js"></script>
     <script type="text/javascript" src="{js_path}jquery.fancybox-1.3.1.pack.js"></script>
     <script type="text/javascript" src="{js_path}jquery.validationEngine.modified.js"></script>
-    <script type="text/javascript" src="{js_path}xgproyect.js"></script>
+    <script type="text/javascript" src="{js_path}ogproyect.js"></script>
     <script type="text/javascript" src="{js_path}test.js"></script>
     <script type="text/javascript">
         // <![CDATA[
@@ -294,8 +294,8 @@
 
     </script>
 
-<script type="text/javascript" src="{js_path}xgproyect.js"></script>
-<script type="text/javascript" src="{js_path}xgproyect.start.js"></script>
+<script type="text/javascript" src="{js_path}ogproyect.js"></script>
+<script type="text/javascript" src="{js_path}ogproyect.start.js"></script>
 
 
 

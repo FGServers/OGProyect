@@ -259,7 +259,7 @@ class Template_Lib
 		$parse['-title-'] 	 = Functions_Lib::read_config ( 'game_name' );
 		$parse['-favi-']	 = "<link rel=\"shortcut icon\" href=\"" . OGP_ROOT . "favicon.ico\">\n";
 		$parse['-meta-']	 = "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\">\n";
-		$parse['-meta-']	.= "<meta name=\"generator\" content=\"XG Proyect " . VERSION . "\" />\n";
+		$parse['-meta-']	.= "<meta name=\"generator\" content=\"OG Proyect " . VERSION . "\" />\n";
 		$parse['-style-']  	 = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . OGP_ROOT . CSS_PATH . "default.css\">\n";
 		$parse['-style-']  	.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . OGP_ROOT . CSS_PATH . "formate.css\">\n";
 		$parse['-style-'] 	.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . OGP_ROOT . DPATH ."formate.css\" />\n";

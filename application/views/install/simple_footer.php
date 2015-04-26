@@ -4,7 +4,7 @@
       <hr>
 
       <footer>
-        <p>&copy; XG Proyect {year}</p>
+        <p>&copy; OG Proyect {year}</p>
       </footer>
 
     </div><!--/.fluid-container-->

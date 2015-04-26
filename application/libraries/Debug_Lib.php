@@ -126,7 +126,7 @@ class Debug_Lib extends OGPCore
 					  <style>
 					    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}
 					  </style>
-					  <a href=//www.google.com/><img src="http://www.ogproyect.com/images/misc/xg-logo.png" alt="XG Proyect"></a>
+					  <a href=//www.google.com/><img src="http://www.ogproyect.com/images/misc/xg-logo.png" alt="OG Proyect"></a>
 					  <p><b>500.</b> <ins>That’s an error.</ins>
 					  <p>The requested URL throw an error. Contact the game Administrator. <ins>That’s all we know.</ins>
 					';
