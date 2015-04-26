@@ -112,7 +112,7 @@ class Officier extends OGPCore
 				{
 					$bloc['dpath']			= DPATH;
 					$bloc['off_id']   		= $Element;
-					$bloc['off_status']		= ( ( Officiers_Lib::is_officier_active ( $this->_current_user[$this->_resource[$Element]] ) ) ? '<font color=lime>' . $this->_lang['of_active'] . ' ' . date ( Functions_Lib::read_config ( 'date_format' ) , $this->_current_user[$this->_resource[$Element]] ) . '</font>' : '<font color=red>' . $this->_lang['of_inactive'] . '</font>' );
+					$bloc['off_status']		= ( ( Officiers_Lib::is_officier_active ( $this->_current_user[$this->_resource[$Element]] ) ) ? '<font color=lime>' . $this->_lang['of_active'] . ' ' . date ( Functions_Lib::read_config ( 'date_format_extended' ) , $this->_current_user[$this->_resource[$Element]] ) . '</font>' : '<font color=red>' . $this->_lang['of_inactive'] . '</font>' );
 					$bloc['off_name']		= $ElementName;
 					$bloc['off_desc'] 		= $this->_lang['res']['descriptions'][$Element];
 					$bloc['off_desc_short'] = $this->_lang['info'][$Element]['description'];
