@@ -25,22 +25,23 @@ PRIMARY KEY (`acs_fleet_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 ";
 
-$QryTableAlliance    = "CREATE TABLE `" . ALLIANCE . "` ( ";
-$QryTableAlliance   .= "`alliance_id` bigint(11) NOT NULL auto_increment, ";
-$QryTableAlliance   .= "`alliance_name` varchar(32) character set latin1 default '', ";
-$QryTableAlliance   .= "`ally_tag` varchar(8) character set latin1 default '', ";
-$QryTableAlliance   .= "`ally_owner` int(11) NOT NULL default '0', ";
-$QryTableAlliance   .= "`ally_register_time` int(11) NOT NULL default '0', ";
-$QryTableAlliance   .= "`ally_description` text character set latin1, ";
-$QryTableAlliance   .= "`alliance_web` varchar(255) character set latin1 default '', ";
-$QryTableAlliance   .= "`ally_text` text character set latin1, ";
-$QryTableAlliance   .= "`ally_image` varchar(255) character set latin1 default '', ";
-$QryTableAlliance   .= "`ally_request` text character set latin1, ";
-$QryTableAlliance   .= "`ally_request_notallow` tinyint(4) NOT NULL default '0', ";
-$QryTableAlliance   .= "`ally_owner_range` varchar(32) character set latin1 default '', ";
-$QryTableAlliance   .= "`ally_ranks` text character set latin1, ";
-$QryTableAlliance   .= "PRIMARY KEY  (`alliance_id`) ";
-$QryTableAlliance   .= ") ENGINE=MyISAM;";
+$table_alliance =
+"CREATE TABLE `" . ALLIANCE . "` (
+`alliance_id` bigint(11) NOT NULL AUTO_INCREMENT,
+`alliance_name` varchar(32) DEFAULT NULL,
+`alliance_tag` varchar(10) DEFAULT NULL,
+`alliance_owner` int(11) NOT NULL DEFAULT '0',
+`alliance_register_time` int(11) NOT NULL DEFAULT '0',
+`alliance_description` text,
+`alliance_web` varchar(255) DEFAULT NULL,
+`alliance_text` text,
+`alliance_image` varchar(255) DEFAULT NULL,
+`alliance_request` text,
+`alliance_request_notallow` tinyint(4) NOT NULL DEFAULT '0',
+`alliance_owner_range` varchar(32) DEFAULT NULL,
+`alliance_ranks` text,
+PRIMARY KEY (`alliance_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;";
 
 $table_alliance_statistics =
 "CREATE TABLE `" . ALLIANCE_STATISTICS . "` (
@@ -197,6 +198,54 @@ $table_premium =
 UNIQUE KEY `premium_user_id` (`premium_user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
 
+$table_planets =
+"CREATE TABLE `" . PLANETS . "` (
+`id` bigint(11) NOT NULL AUTO_INCREMENT,
+`name` varchar(255) DEFAULT NULL,
+`id_owner` int(11) DEFAULT NULL,
+`galaxy` int(11) NOT NULL DEFAULT '0',
+`system` int(11) NOT NULL DEFAULT '0',
+`planet` int(11) NOT NULL DEFAULT '0',
+`last_update` int(11) DEFAULT NULL,
+`planet_type` int(11) NOT NULL DEFAULT '1',
+`planet_destroyed` int(11) NOT NULL DEFAULT '0',
+`planet_b_building` int(11) NOT NULL DEFAULT '0',
+`planet_b_building_id` text NOT NULL,
+`b_tech` int(11) NOT NULL DEFAULT '0',
+`b_tech_id` int(11) NOT NULL DEFAULT '0',
+`b_hangar` int(11) NOT NULL DEFAULT '0',
+`b_hangar_id` text NOT NULL,
+`b_hangar_plus` int(11) NOT NULL DEFAULT '0',
+`image` varchar(32) NOT NULL DEFAULT 'normaltempplanet01',
+`diameter` int(11) NOT NULL DEFAULT '12800',
+`field_current` int(11) NOT NULL DEFAULT '0',
+`field_max` int(11) NOT NULL DEFAULT '163',
+`temp_min` int(3) NOT NULL DEFAULT '-17',
+`temp_max` int(3) NOT NULL DEFAULT '23',
+`metal` double(132,8) NOT NULL DEFAULT '0.00000000',
+`metal_perhour` int(11) NOT NULL DEFAULT '0',
+`metal_max` bigint(20) DEFAULT '10000',
+`crystal` double(132,8) NOT NULL DEFAULT '0.00000000',
+`crystal_perhour` int(11) NOT NULL DEFAULT '0',
+`crystal_max` bigint(20) DEFAULT '10000',
+`deuterium` double(132,8) NOT NULL DEFAULT '0.00000000',
+`deuterium_perhour` int(11) NOT NULL DEFAULT '0',
+`deuterium_max` bigint(20) DEFAULT '10000',
+`energy_used` int(11) NOT NULL DEFAULT '0',
+`energy_max` bigint(20) NOT NULL DEFAULT '0',
+`building_metal_mine_porcent` int(11) NOT NULL DEFAULT '10',
+`building_crystal_mine_porcent` int(11) NOT NULL DEFAULT '10',
+`building_deuterium_sintetizer_porcent` int(11) NOT NULL DEFAULT '10',
+`building_solar_plant_porcent` int(11) NOT NULL DEFAULT '10',
+`building_fusion_reactor_porcent` int(11) NOT NULL DEFAULT '10',
+`ship_solar_satellite_porcent` int(11) NOT NULL DEFAULT '10',
+`last_jump_time` int(11) NOT NULL DEFAULT '0',
+`planet_debris_metal` bigint(11) NOT NULL DEFAULT '0',
+`planet_debris_crystal` bigint(11) NOT NULL DEFAULT '0',
+`invisible_start_time` int(11) NOT NULL DEFAULT '0',
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;";
+
 $table_reports =
 "CREATE TABLE `" . REPORTS . "` (
 `report_owners` varchar(255) NOT NULL,
@@ -332,52 +381,5 @@ $table_user_statistics =
 `user_statistic_update_time` int(11) NOT NULL DEFAULT '0',
 PRIMARY KEY (`user_statistic_user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
-
-$QryTablePlanets     = "CREATE TABLE `" . PLANETS . "` ( ";
-$QryTablePlanets    .= "`id` bigint(11) NOT NULL auto_increment, ";
-$QryTablePlanets    .= "`name` varchar(255) character set latin1 default 'Planeta Principal', ";
-$QryTablePlanets    .= "`id_owner` int(11) default NULL, ";
-$QryTablePlanets    .= "`galaxy` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`system` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`planet` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`last_update` int(11) default NULL, ";
-$QryTablePlanets    .= "`planet_type` int(11) NOT NULL default '1', ";
-$QryTablePlanets    .= "`planet_destroyed` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`planet_b_building` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`planet_b_building_id` text character set latin1 NOT NULL, ";
-$QryTablePlanets    .= "`b_tech` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`b_tech_id` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`b_hangar` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`b_hangar_id` text character set latin1 NOT NULL, ";
-$QryTablePlanets    .= "`b_hangar_plus` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`image` varchar(32) character set latin1 NOT NULL default 'normaltempplanet01', ";
-$QryTablePlanets    .= "`diameter` int(11) NOT NULL default '12800', ";
-$QryTablePlanets    .= "`field_current` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`field_max` int(11) NOT NULL default '163', ";
-$QryTablePlanets    .= "`temp_min` int(3) NOT NULL default '-17', ";
-$QryTablePlanets    .= "`temp_max` int(3) NOT NULL default '23', ";
-$QryTablePlanets    .= "`metal` double(132,8) NOT NULL default '0.00000000', ";
-$QryTablePlanets    .= "`metal_perhour` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`metal_max` bigint(20) default '10000', ";
-$QryTablePlanets    .= "`crystal` double(132,8) NOT NULL default '0.00000000', ";
-$QryTablePlanets    .= "`crystal_perhour` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`crystal_max` bigint(20) default '10000', ";
-$QryTablePlanets    .= "`deuterium` double(132,8) NOT NULL default '0.00000000', ";
-$QryTablePlanets    .= "`deuterium_perhour` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`deuterium_max` bigint(20) default '10000', ";
-$QryTablePlanets    .= "`energy_used` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`energy_max` bigint(20) NOT NULL default '0', ";
-$QryTablePlanets    .= "`building_metal_mine_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`building_crystal_mine_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`building_deuterium_sintetizer_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`building_solar_plant_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`building_fusion_reactor_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`ship_solar_satellite_porcent` int(11) NOT NULL default '10', ";
-$QryTablePlanets    .= "`last_jump_time` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`planet_debris_metal` bigint(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`planet_debris_crystal` bigint(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "`invisible_start_time` int(11) NOT NULL default '0', ";
-$QryTablePlanets    .= "PRIMARY KEY  (`id`) ";
-$QryTablePlanets    .= ") ENGINE=MyISAM;";
 
 ?>
