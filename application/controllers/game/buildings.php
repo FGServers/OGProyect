@@ -89,6 +89,15 @@ class Buildings extends OGPCore
 		$page        		= '';
 		$max_fields    		= Developments_Lib::max_fields ( $this->_current_planet );
 
+		if ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) > 0 )
+		{
+			$SizeQueue = MAX_BUILDING_QUEUE_SIZE;
+		}
+		else
+		{
+			$SizeQueue = 1;
+		}
+
 		// time to do something
 		$this->do_command();
 
@@ -99,7 +108,7 @@ class Buildings extends OGPCore
 
 		$this->start_building();
 
-		$full_queue			= ( $queue['lenght'] < MAX_BUILDING_QUEUE_SIZE ) ? FALSE : TRUE;
+		$full_queue			= ( $queue['lenght'] < $SizeQueue ) ? FALSE : TRUE;
 
 		foreach ( $this->_lang['tech'] as $building => $building_name )
 		{
@@ -134,7 +143,7 @@ class Buildings extends OGPCore
 			}
 		}
 
-		if ( $queue['lenght'] > 0 )
+		/*if ( $queue['lenght'] > 0 )
 		{
 			$parse['BuildListScript']  = Developments_Lib::current_building ( $this->_current_page );
 			$parse['BuildList']        = $queue['buildlist'];
@@ -147,7 +156,32 @@ class Buildings extends OGPCore
 
 		$parse['BuildingsList']        = $page;
 
-		parent::$page->display ( parent::$page->parse_template ( parent::$page->get_template ( 'buildings/buildings_builds' ) , $parse ) );
+		parent::$page->display ( parent::$page->parse_template ( parent::$page->get_template ( 'buildings/buildings_builds' ) , $parse ) );*/
+
+
+		if ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) > 0 )
+		{
+			if ( $queue['lenght'] > 0 )
+			{
+				$parse['BuildListScript']  = Developments_Lib::current_building ( $this->_current_page );
+				$parse['BuildList']        = $queue['buildlist'];
+			}
+			else
+			{
+				$parse['BuildListScript']  = "";
+				$parse['BuildList']        = "";
+			}			
+
+			$parse['BuildingsList']        = $page;
+
+			parent::$page->display ( parent::$page->parse_template ( parent::$page->get_template ( 'buildings/buildings_builds' ) , $parse ) );
+		}
+		else
+		{
+			$parse['BuildingsList']		= $page;
+			
+			parent::$page->display ( parent::$page->parse_template ( parent::$page->get_template ( 'buildings/buildings_builds' ) , $parse ) );
+		}
 	}
 
 	/**
@@ -219,7 +253,7 @@ class Buildings extends OGPCore
 		$action				= Format_Lib::color_red ( $this->_lang['bd_no_more_fields'] );
 
 		// with fields
-		if ( $have_fields && ! $full_queue )
+		if ( $have_fields && !$full_queue )
 		{
 			if ( $queue['lenght'] == 0 )
 			{
@@ -237,11 +271,50 @@ class Buildings extends OGPCore
 				$action 	= Functions_Lib::set_url ( 'game.php?page=' . $this->_current_page . '&cmd=insert&building='. $building , '' , Format_Lib::color_green ( $this->_lang['bd_add_to_list'] ) );
 			}
 		}
+		elseif ( $have_fields && $full_queue )
+		{
+			if ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) > 0 )
+			{
+					$action 	= Functions_Lib::set_url ( 'game.php?page=' . $this->_current_page . '&cmd=insert&building='. $building , '' , Format_Lib::color_green ( $this->_lang['bd_add_to_list'] ) );
+			}
+			else
+			{
+				if($building == $this->_current_planet['planet_b_building_id'])
+				{
+					if( $queue['lenght'] > 1 )
+					{
+						Functions_Lib::redirect ("game.php?page=".$this->_current_page."&listid=2&cmd=remove&planet=".$this->_current_planet['id']);
+					}
+			
+					$BuildQueue 	= explode(";",$this->_current_planet['planet_b_building_id']);
+					$CurrBuild 		= explode(",",$BuildQueue[0]);
+					$RestTime 		= $this->_current_planet['planet_b_building'] - time();
+					$PlanetID     	= $this->_current_planet['id'];
+								
+					$Build  = Developments_Lib::current_building ( $this->_current_page );
+					$Build .= "<br /><div id=\"blc\" class=\"z\">" . date(Functions_Lib::read_config ( 'date_format_extended' ) ,$RestTime)  . "</div>";
+					$Build .= "\n<script language=\"JavaScript\">";
+					$Build .= "\n	pp = \"" . $RestTime . "\";\n";
+					$Build .= "\n	pk = \"" . 1 . "\";\n";
+					$Build .= "\n	pm = \"cancel\";\n";
+					$Build .= "\n	pl = \"" . $PlanetID . "\";\n";
+					$Build .= "\n	t();\n";
+					$Build .= "\n</script>\n";
+			
+					$action = $Build;
+				}
+				else
+				{
+					$action = '';
+				}
 
-		if ( $have_fields && $full_queue )
+			}
+		}
+
+		/*if ( $have_fields && !$full_queue )
 		{
 			$action 		= Format_Lib::color_red ( $this->_lang['bd_build'] );
-		}
+		}*/
 
 		if ( ( $building == 31 && Developments_Lib::is_lab_working ( $this->_current_user ) ) or ( ( $building == 21 or $building == 14 or $building == 15 ) && Developments_Lib::is_shipyard_working ( $this->_current_planet ) ) )
 		{
@@ -451,6 +524,15 @@ class Buildings extends OGPCore
 			Functions_Lib::redirect ( 'game.php?page=' . $this->_current_page );
 		}
 
+		if ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) > 0 )
+		{
+			$SizeQueue = MAX_BUILDING_QUEUE_SIZE;
+		} 
+		else 
+		{
+			$SizeQueue = 1;
+		}
+
 		if ($CurrentQueue != 0)
 		{
 			$QueueArray    = explode ( ";", $CurrentQueue );
@@ -471,7 +553,7 @@ class Buildings extends OGPCore
 			$BuildMode = 'destroy';
 		}
 
-		if ( $ActualCount < MAX_BUILDING_QUEUE_SIZE )
+		if ( $ActualCount < $SizeQueue )
 		{
 			$QueueID      = $ActualCount + 1;
 		}

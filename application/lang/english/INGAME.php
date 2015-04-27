@@ -377,9 +377,9 @@ $lang['rs_production_on_planet']			= 'Resource production on planet "%s"';
 $lang['rs_basic_income']					= 'Basic Income';
 $lang['rs_storage_capacity']				= 'Storage Capacity';
 $lang['rs_calculate']						= 'calculate';
-$lang['rs_sum']								= 'Total:';
-$lang['rs_daily']							= 'Res per day:';
-$lang['rs_weekly']							= 'Res per week:';
+$lang['rs_sum']								= 'Total per hour:';
+$lang['rs_daily']							= 'Total per day:';
+$lang['rs_weekly']							= 'Total per week:';
 $lang['rs_geologist_bonus']					= '+10% mine production';
 $lang['rs_engineer_bonus']					= '+10% energy production';
 

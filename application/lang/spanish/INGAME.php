@@ -373,11 +373,11 @@ $lang['rs_amount']							= 'cantidad';
 $lang['rs_lvl']								= 'nivel';
 $lang['rs_production_on_planet']			= 'Producción de recursos en el planeta "%s"';
 $lang['rs_basic_income']					= 'Ingresos básicos';
-$lang['rs_storage_capacity']				= 'Capacidad de los almacenes';
+$lang['rs_storage_capacity']				= 'Capacidad de almacenamiento';
 $lang['rs_calculate']						= 'Calcular';
-$lang['rs_sum']								= 'Suma';
-$lang['rs_daily']							= 'Diaria';
-$lang['rs_weekly']							= 'Semanal';
+$lang['rs_sum']								= 'Total por hora:';
+$lang['rs_daily']							= 'Total por día:';
+$lang['rs_weekly']							= 'Total por semana:';
 $lang['rs_geologist_bonus']					= '+10% producción de minas';
 $lang['rs_engineer_bonus']					= '+10% de producción de energía';
 
