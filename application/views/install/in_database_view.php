@@ -20,7 +20,7 @@
 					<label>{ins_password_title}</label>
 					<input type="password" name="password">
 					<label>{ins_prefix_title}</label>
-					<input type="text" name="prefix" placeholder="{ins_ex_tag} xgp_" value="">
+					<input type="text" name="prefix" placeholder="{ins_ex_tag} ogp_" value="">
 					<div align="center">
 						<input type="button" class="btn btn-primary" name="next" onclick="submit();" value="{ins_install_go}">
 					</div>

@@ -31,7 +31,7 @@ class Spy extends Missions
 	{
 		if ( $fleet_row['fleet_mess'] == 0 && $fleet_row['fleet_start_time'] <= time() )
 		{
-			$current_data	= parent::$db->query_fetch ( "SELECT p.name, p.galaxy, p.system, p.planet, u.user_name, r.research_espionage_technology, pr.premium_officier_technocrat
+			$current_data	= parent::$db->query_fetch ( "SELECT p.name, p.galaxy, p.system, p.planet, u.user_id, u.user_name, r.research_espionage_technology, pr.premium_officier_technocrat
 															FROM " . PLANETS . " AS p
 															INNER JOIN " . USERS . " AS u ON u.user_id = p.id_owner
 															INNER JOIN " . PREMIUM . " AS pr ON pr.premium_user_id = p.id_owner
@@ -53,6 +53,11 @@ class Spy extends Missions
 																	p.`system` = '" . $fleet_row['fleet_end_system'] . "' AND
 																	p.`planet` = '" . $fleet_row['fleet_end_planet'] . "' AND
 																	p.`planet_type` = '" . $fleet_row['fleet_end_type'] . "';" );
+
+			//IMPROVES TUTORIAL MISSION 7
+			parent::$db->query("UPDATE ".USERS."
+										SET `user_tutorial_7_spy` = '1' 
+											WHERE `user_id` = '". $current_data['user_id'] ."';");
 
 			$CurrentSpyLvl       = Officiers_Lib::get_max_espionage ( $current_data['research_espionage_technology'] , $current_data['premium_officier_technocrat'] );
 			$TargetSpyLvl        = Officiers_Lib::get_max_espionage ( $target_data['research_espionage_technology'] , $target_data['premium_officier_technocrat'] );

@@ -220,6 +220,7 @@ $lang['module'][21]											= 'Opciones';
 $lang['module'][22]											= 'Baneados';
 $lang['module'][23]											= 'Reportes de Combate';
 $lang['module'][24]											= 'Información / Salto cuántico';
+$lang['module'][25]											= 'Tutorial OGP';
 
 // USER REGISTRATION SETTINGS
 $lang['ur_settings']										= 'Ajustes de registro';

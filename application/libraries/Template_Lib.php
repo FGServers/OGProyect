@@ -257,7 +257,7 @@ class Template_Lib
 	private function game_header ( $metatags = '' )
 	{
 		$parse['-title-'] 	 = Functions_Lib::read_config ( 'game_name' );
-		$parse['-favi-']	 = "<link rel=\"shortcut icon\" href=\"" . OGP_ROOT . "favicon.ico\">\n";
+		$parse['-favi-']	 = "<link rel=\"shortcut icon\" href=\"./favicon.ico\" type=\"image/x-icon\">\n";
 		$parse['-meta-']	 = "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\">\n";
 		$parse['-meta-']	.= "<meta name=\"generator\" content=\"OG Proyect " . VERSION . "\" />\n";
 		$parse['-style-']  	 = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . OGP_ROOT . CSS_PATH . "default.css\">\n";
@@ -387,6 +387,7 @@ class Template_Lib
 									array ( 'buddy' 			, $this->_lang['lm_buddylist'] 				, '' 					, 'FFF'  	, 'true'	, '3' , '20' ),
 									array ( 'options' 			, $this->_lang['lm_options'] 				, '' 					, 'FFF'  	, ''		, '3' , '21' ),
 									array ( 'banned' 			, $this->_lang['lm_banned'] 				, '' 					, 'FFF'  	, ''		, '3' , '22' ),
+									array ( 'tutorial' 			, $this->_lang['lm_tutorial'] 				, '' 					, 'FFF'  	, ''		, '4' , '25' ),
 									array ( 'logout' 			, $this->_lang['lm_logout'] 				, '' 					, 'FFF'  	, ''		, '3' , '' ),
 								);
 
@@ -402,6 +403,16 @@ class Template_Lib
 			if ( !Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_commander'] ) && $data[0] == 'imperium' )
 			{
 				continue;
+			}
+
+			if ( $data[0] == 'messages' )
+			{
+				
+				$new_messages 		= '('. $this->_current_user['new_message'] . ')';
+			}
+			else
+			{
+				$new_messages 		= '';
 			}
 
 			// BUILD URL
@@ -421,7 +432,7 @@ class Template_Lib
 			}
 			else
 			{
-				$link_type = '<a href="' . $link . '"><font color="' . (($data[3]!='FFF')?$data[3]:'') . '">' . $data[1] . '</font></a>';
+				$link_type = '<a href="' . $link . '"><font color="' . (($data[3]!='FFF')?$data[3]:'') . '">' . $data[1] . ' '.$new_messages.'</font></a>';
 			}
 
 			// COLOR AND URL
@@ -432,6 +443,14 @@ class Template_Lib
 			if ( $data[5] == 0 )
 			{
 				$parse['changelog']	= '(' . $link_type . ')';
+			}
+
+			if ( isset ( $modules_array[$data[6]] ) == 25 )
+			{
+				if ( $data[5] == 4 )
+				{
+					$parse['tutorial']	=  '<table width="110" style="border: 2px solid #1DF0F0; text-align:center;background:transparent;{display}"><tr style="background:transparent;"><td style="background:transparent;">'.$link_type.'</td></tr></table><br>';
+				}
 			}
 
 			// MENU BLOCK [1 - 2 - 3]

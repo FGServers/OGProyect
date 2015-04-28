@@ -47,6 +47,11 @@ class Recycle extends Missions
 												`planet_type` = 1 AND
 												`fleet_id` = '".intval($fleet_row['fleet_id'])."'" );
 
+				//IMPROVES TUTORIAL MISSION 10
+				parent::$db->query("UPDATE ".USERS."
+										SET `user_tutorial_10_rec` = '1' 
+											WHERE `user_id` = '". $fleet_row['user_id'] ."';");
+
 				$message	= sprintf ( $this->_lang['sys_recy_gotten'] , Format_Lib::pretty_number ( $recycled_resources["metal"] ) , $this->_lang['Metal'] , Format_Lib::pretty_number ( $recycled_resources["crystal"] ) , $this->_lang['Crystal'] );
 				$this->recycle_message ( $fleet_row['fleet_owner'] , $message , $fleet_row['fleet_start_time'] , $this->_lang['sys_recy_report'] );
 			}
@@ -90,11 +95,11 @@ class Recycle extends Missions
 
 				if ( $ship[0] == 209 )
 				{
-					$recycle_capacity	+= parent::$_pricelist[$ship[0]]["capacity"] * $ship[1];
+					$recycle_capacity	+= $this->_pricelist[$ship[0]]['capacity'] * $ship[1];
 				}
 				else
 				{
-					$other_capacity		+= parent::$_pricelist[$ship[0]]["capacity"] * $ship[1];
+					$other_capacity		+= $this->_pricelist[$ship[0]]['capacity'] * $ship[1];
 				}
 			}
 		}

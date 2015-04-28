@@ -31,7 +31,7 @@
           <td class=c colspan=3>{al_message} (<span id="cntChars">0</span> / 5000 {al_characters})</td>
         </tr>
         <tr>
-          <th colspan="3"><textarea name="text" cols=70 rows=15 onkeyup="javascript:cntchar(5000)">{text}</textarea>
+          <th colspan="3"><textarea id="markItUp" name="text" cols=70 rows=15 onkeyup="javascript:cntchar(5000)">{text}</textarea>
     {request_type}
         </th>
         </tr>
@@ -44,17 +44,17 @@
     </table>
     </form>
     <form action="" method="POST">
-    <table width=519>
+    <table width="519">
         <tr>
-          <td class=c colspan=2>{al_manage_options}</td>
+          <td class="c" colspan="2">{al_manage_options}</td>
         </tr>
         <tr>
           <th>{al_web_site}</th>
-          <th><input type=text name="web" value="{alliance_web}" size="70"></th>
+          <th><input type=text name="web" value="{alliance_web}" size="65"></th>
         </tr>
         <tr>
           <th>{al_manage_image}</th>
-          <th><input type=text name="image" value="{ally_image}" size="70"></th>
+          <th><input type=text name="image" value="{ally_image}" size="65"></th>
         </tr>
         <tr>
           <th>{al_manage_requests}</th>

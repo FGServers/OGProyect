@@ -14,6 +14,9 @@ $lang['changelog']   = array(
 
 - [Novedades]
 - Se actualizaron las imagenes por las del rediseño.
+- Publicidad en juego sin comandante.
+- Lista de construcciones como ogame original (By Gonzalo).
+- Tutorial como el ogame rediseño.
 
 - [Fix]
 - Al instalar no colocaba bien el nombre del planeta principal del administrador.

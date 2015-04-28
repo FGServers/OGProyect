@@ -268,7 +268,8 @@ class Research extends OGPCore
 
 			if ( strpos ( $current_queue , ';' ) )
 			{	
-				if(isset($arreglo[$i])){
+				if(isset($arreglo[$i]))
+				{
 
 					$queue	= explode ( ';' , $current_queue );
 

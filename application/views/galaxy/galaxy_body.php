@@ -82,7 +82,7 @@
       switch(parseInt(retVals[0])) {
           case 600:
           addToTable("{gl_success}", "success");
-                    break;
+          break;
           case 601:
           addToTable("{gl_error}", "error");
           break;

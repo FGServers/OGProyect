@@ -12,6 +12,7 @@
 					{servername} {changelog}
 				</NOBR>
 			</p>
+			{tutorial}
 			<table width="110" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>

@@ -35,6 +35,12 @@ class Expedition extends Missions
 			{
 				$ships_points 			= $this->set_ships_points();
 				$ships 					= explode ( ";" , $fleet_row['fleet_array'] );
+				// IMPROVES TUTORIAL MISSION 8
+				$last_id				= parent::$db->insert_id();
+
+				parent::$db->query ( "UPDATE " . USERS . " SET
+										`user_tutorial_8_exp` = '1'
+											WHERE `user_id` = '" . $last_id . "';");
 
 				foreach ( $ships as $item => $group )
 				{

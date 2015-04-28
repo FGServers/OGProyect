@@ -107,6 +107,7 @@ class Trader extends OGPCore
 							$this->_current_planet['crystal']   += isset ( $_POST['cristal'] ) ? $_POST['cristal'] : 0;
 							$this->_current_planet['deuterium'] += isset ( $_POST['deut'] ) ? $_POST['deut'] : 0;
 
+							$this->enable_tutorial ( $this->_current_user ); // IMPROVS FROM TUTORIAL
 							$this->discount_dark_matter(); // REDUCE DARKMATTER
 						}
 						else
@@ -150,6 +151,7 @@ class Trader extends OGPCore
 							$this->_current_planet['crystal']   -= $necessaire;
 							$this->_current_planet['deuterium'] += isset ( $_POST['deut'] ) ? $_POST['deut'] : 0;
 
+							$this->enable_tutorial ( $this->_current_user ); // IMPROVS FROM TUTORIAL
 							$this->discount_dark_matter ( $this->_current_user ); // REDUCE DARKMATTER
 						}
 						else
@@ -192,6 +194,7 @@ class Trader extends OGPCore
 							$this->_current_planet['crystal']   += isset ( $_POST['cristal'] ) ? $_POST['cristal'] : 0;
 							$this->_current_planet['deuterium'] -= $necessaire;
 
+							$this->enable_tutorial ( $this->_current_user ); // IMPROVS FROM TUTORIAL
 							$this->discount_dark_matter ( $this->_current_user ); // REDUCE DARKMATTER
 						}
 						else
@@ -322,6 +325,18 @@ class Trader extends OGPCore
 		parent::$db->query ( "UPDATE `" . PREMIUM . "` SET
 								`premium_dark_matter` = `premium_dark_matter` - " . $this->_tr_dark_matter . "
 								WHERE `premium_user_id` = " . $this->_current_user['user_id'] . "");
+	}
+
+	/**
+	 * method enable tutorial
+	 * param
+	 * return ammount + 1 lvl tutorial
+	 */
+	private function enable_tutorial()
+	{
+		parent::$db->query("UPDATE ".USERS."
+										SET `user_tutorial_6_mer` = '1' 
+											WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 	}
 }
 /* end of trader.php */

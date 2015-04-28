@@ -173,7 +173,7 @@ class Galaxy extends OGPCore
 															(p.planet>'0' AND
 															p.planet<='".MAX_PLANET_IN_SYSTEM."'))
 													ORDER BY p.planet;" );
-
+													
 		$parse						= $this->_lang;
 		$parse['js_path']			= OGP_ROOT . JS_PATH;
 		$parse['galaxy']			= $this->_galaxy;

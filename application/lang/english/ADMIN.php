@@ -221,6 +221,7 @@ $lang['module'][21]											= 'Options';
 $lang['module'][22]											= 'Banned';
 $lang['module'][23]											= 'Combat Reports';
 $lang['module'][24]											= 'Information / Jump Gate';
+$lang['module'][25]											= 'OGP Tutorial';
 
 // USER REGISTRATION SETTINGS
 $lang['ur_settings']										= 'User registration settings';

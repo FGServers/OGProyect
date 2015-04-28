@@ -91,6 +91,7 @@ $lang['lm_search']							= 'Buscar';
 $lang['lm_options']							= 'Opciones';
 $lang['lm_banned']							= 'Baneados';
 $lang['lm_forums']							= 'Foro';
+$lang['lm_tutorial']						= 'Tutorial';
 $lang['lm_logout']							= 'Salir';
 $lang['lm_administration']					= 'Administración';
 $lang['lm_module_not_accesible']			= 'No se puede acceder en este momento a la página solicitada';
@@ -1072,6 +1073,86 @@ $lang['op_sort_alpha']						= 'Orden alfabético';
 $lang['op_sort_asc']						= 'Creciente';
 $lang['op_sort_desc']						= 'Decreciente';
 
+//----------------------------------------------------------------------------//
+//TUTORIAL
+$lang['tut_title']							= 'Tutorial';
+$lang['tut_title_welcome']					= 'Bienviviendo a';
+$lang['tut_title_welcome_secundary']		= '¿Recorres por primera vez la galaxia? Este tutorial te explicará las funciones principales del juego.';
+$lang['tut_title_curse_game']				= 'En el trascurso del juego tendrás que realizar varias tareas, por las cuales obtendrás una recompensa si las cumples con éxito.';
+$lang['tut_title_sequence']					= 'Las tareas se pueden realizar en el orden que se prefiera. Sin embargo, puesto que las instrucciones están colocadas la una sobre la otra, recomendamos usar el orden predefinido.';
+$lang['tut_title_problems']					= 'Si tienes problemas con una tarea, haz clic en la "clave de solución" en el menú individual. Allí obtendrás una aclaración detallada.';
+$lang['tut_title_finished']					= 'Tan pronto como hayas concluido una tarea, obtendrás más información y una recompensa por tu esfuerzo.';
+//TUTORIAL TITLE MISSION NUMBER
+$lang['tut_title_tusk_1']					= 'Tarea 1 - Base de abastecimiento';
+$lang['tut_title_tusk_2']					= 'Tarea 2 - Defensa de los planetas';
+$lang['tut_title_tusk_3']					= 'Tarea 3 - Abastecimiento de los planetas';
+$lang['tut_title_tusk_4']					= 'Tarea 4 - La primera nave';
+$lang['tut_title_tusk_5']					= 'Tarea 5 - Redes de información';
+$lang['tut_title_tusk_6']					= 'Tarea 6 - Comerciante';
+$lang['tut_title_tusk_7']					= 'Tarea 7 - Acción de la flota';
+$lang['tut_title_tusk_8']					= 'Tarea 8 - Espacio infinito';
+$lang['tut_title_tusk_9']					= 'Tarea 9 - Aumento del imperio';
+$lang['tut_title_tusk_10']					= 'Tarea 10 - Campo de escombros';
+//TUTORIAL MISSION DESCRIPTION
+$lang['tut_tusk_description_mission_1']		= 'Para la expansión de tu planeta principal necesitas en primer lugar suficientes recursos. Estos recursos los puedes extraer de la minas. Asegura tu base de abastecimiento expandiendo tus minas de metal y cristal. Por favor, ten en cuenta que el mantenimiento de los edificios de recursos requiere de mucha energía. Esta energía puedes obtenerla, por ejemplo, usando plantas de energía.';
+$lang['tut_tusk_description_mission_2']		= 'Para proteger tus recursos de los saqueos enemigos, debes pensar en el incremento de defensas desde un buen principio. Puedes, por ejemplo, leer lo necesario para poder construir un lanzamisiles en el árbol de tecnologías del lanzamisiles. Necesitarás deuterio para incrementar tus defensas, por ello, primero asegura una producción básica de este recurso.';
+$lang['tut_tusk_description_mission_3']		= 'Después de poner las fuentes de recursos tenés que intensificarlas. Por favor, asegúrate siempre de que haya suficiente energía disponible.';
+$lang['tut_tusk_description_mission_4']		= 'Las naves, al igual que tu lanza misiles, pueden protegerte de tus oponentes. Estas tienen la ventaja de que pueden ser utilizadas adicionalmente para finalidades ofensivas. No obstante, las naves y estructuras defensivas tienen que ser investigadas primero. Para ello necesitas del laboratorio de investigacion.';
+$lang['tut_tusk_description_mission_5']		= '¡No estás solo en el universo! Redes de información y de contacto son muy importantes. Quien entable buenos contactos, puede contar con la ayuda de otros jugadores y puede encontrar socios de comercio con mayor facilidad. Las informaciones y las novedades de los acontecimientos del juego son importantes para que estés al día. Muchos de los jugadores forman alianzas para alcanzar juntos sus objetivos.';
+$lang['tut_tusk_description_mission_6']		= 'El mercader es una característica premium con la cual podés cambiar un recurso por otro mediante unos ratios variables del sistema. La cantidad máxima de cambio está limitada por la cantidad de tus recursos y el máximo que podés pedir por la capacidad de tus almacenes.';
+$lang['tut_tusk_description_mission_7']		= 'Otra alternativa para obtener recursos es saqueando otros planetas. Sin embargo, tené cuidado porque estos pueden estar eventualmente bien protegidos. Para poder obtener más información sobre los planetas desconocidos, puedes espiarlos.';
+$lang['tut_tusk_description_mission_8']		= 'El universo es inmenso. Hay muchos exploradores que intentan explorar constantemente sectores desconocidos. Durante sus investigaciones, ellos se encuentran con oponentes, con anomalías y con nuevas fuentes de recursos. Un emperador tan respetable como tú tiene que permitirse también este lujo y enviar exploradores valientes a investigar otros planetas. Simples sondas de espionaje no tienen un alcance suficiente y dan de datos inexactos.';
+$lang['tut_tusk_description_mission_9']		= 'Un emperador está siempre muy ansioso por expandir su imperio. Ya has puesto los fundamentos para esto en tu planeta principal, pero en algún momento estos serán completamente expandidos. Conquista a tiempo nuevos planetas para que obtengas rápidamente recursos y nuevos espacios de construcción. A través del flexible tráfico aéreo entre los planetas, tienes un dispositivo poderoso para proteger tus recursos de los ataques enemigos.';
+$lang['tut_tusk_description_mission_10']	= 'Después de las luchas en el órbita, campos de escombros son formados a través de los residuos de metal y de cristal de las naves derribadas. La recolección de estos escombros te ofrece una importante alternativa de ganar recursos.';
+//TUTORIAL TUSK WORK ALL MISSION REQUIRED
+$lang['tut_tusk_required_mission_1_metal']  = 'Expansión de la mina de metal al nivel 4';
+$lang['tut_tusk_required_mission_1_crystal']= 'Expansión de la mina de cristal al nivel 2';
+$lang['tut_tusk_required_mission_1_solar']  = 'Expansión de la planta de energía solar al nivel 4';
+$lang['tut_tusk_required_mission_2_deute']	= 'Expansión del sintetizador de deuterio al nivel 2';
+$lang['tut_tusk_required_mission_2_robot']	= 'Construye una fábrica de robots al nivel 2';
+$lang['tut_tusk_required_mission_2_shipya'] = 'Construye un hangar en el nivel 1';
+$lang['tut_tusk_required_mission_2_missil']	= 'Construye un lanzamisiles';
+$lang['tut_tusk_required_mission_3_metal']	= 'Expansión de la mina de metal al nivel 10';
+$lang['tut_tusk_required_mission_3_cristal']= 'Expansión de la mina de cristal al nivel 7';
+$lang['tut_tusk_required_mission_3_deute']	= 'Expansión del sintetizador de deuterio al nivel 5';
+$lang['tut_tusk_required_mission_4_lab']	= 'Construye un laboratorio de investigación con el nivel 1';
+$lang['tut_tusk_required_mission_4_scargo']	= 'Construye una nave pequeña de carga';
+$lang['tut_tusk_required_mission_4_motor']	= 'Investiga el motor de combustión en el nivel 2';
+$lang['tut_tusk_required_mission_5_rename']	= 'Cambia el nombre de un planeta';
+$lang['tut_tusk_required_mission_5_buddy']	= 'Crea una solicitud de amigo';
+$lang['tut_tusk_required_mission_5_ally']	= 'Únete a una alianza de 3 miembros como mínimo.';
+$lang['tut_tusk_required_mission_6_store']	= 'Construye un almacén de recursos de tu elección en el nivel 1';
+$lang['tut_tusk_required_mission_6_trader']	= 'Solicita la ayuda de un comerciante (cuesta 3.500 de Materia oscura).';
+$lang['tut_tusk_required_mission_7_probe']	= 'Construye una sonda de espionaje';
+$lang['tut_tusk_required_mission_7_spy']	= 'Espía los planetas de otro jugador.';
+$lang['tut_tusk_required_mission_8_exped']	= 'Efectúa una expedición';
+$lang['tut_tusk_required_mission_9_colony']	= 'Funda una colonia';
+$lang['tut_tusk_required_mission_10_recyc']	= 'Recolectar 1 campo de escombros';
+
+//TUTORIAL TUSK WORK ALL MISSION REWARD
+$lang['tut_tusk_reward_mission_1']			= 'Recompensa: 150 unidades de metal + 75 unidades de cristal';
+$lang['tut_tusk_reward_mission_2']			= 'Recompensa: +1 Lanza misiles';
+$lang['tut_tusk_reward_mission_3']			= 'Recompensa: Recompensa: 2000 metal + 500 cristal';
+$lang['tut_tusk_reward_mission_4']			= 'Recompensa: 200 Deuterio';
+$lang['tut_tusk_reward_mission_5']			= 'Recompensa: 3.500 unidades de materia oscura (son necesarias para el siguiente paso del tutorial)';
+$lang['tut_tusk_reward_mission_6']			= 'Recompensa: +1 nivel al espacio del almacén de un recurso';
+$lang['tut_tusk_reward_mission_7']			= 'Recompensa: 2 Sondas de espionaje';
+$lang['tut_tusk_reward_mission_8']			= 'Recompensa: 2 Cazadores pesados, 5 naves de carga pequeñas';
+$lang['tut_tusk_reward_mission_9']			= 'Recompensa: Modo comandante durante 3 días';
+$lang['tut_tusk_reward_mission_10']			= 'Recompensa: 1 Reciclador';
+//TUTORIAL OTHER TEXT
+$lang['tut_tusk']							= 'Misiones:';
+$lang['tut_congratulation'] 				= 'Felicitaciones';
+$lang['tut_finish_messages']				= 'Has completado el tutorial, ahora tienes los conocimientos basicos para poder llegar a ser el lider del universo';
+$lang['tut_mission_complete']				= 'Has completado la misión';
+//TUTORIAL BOTUNS
+$lang['tut_btn_start_tutorial']				= 'Comenzar';
+$lang['tut_btn_close_tutorial']				= 'Cerrar';
+$lang['tut_btn_continue_tutorial']			= 'Continuar';
+$lang['tut_btn_finish_tutorial'] 			= 'Finalizar Tutorial';
+$lang['tut_btn_reward_tutorial']			= 'Recompensa';
+$lang['tut_btn_next_mission_tutorial']		= 'Siguiente misión >>';
+$lang['tut_btn_solution_hints_tutorial']	= 'Clave de solución';
 //----------------------------------------------------------------------------//
 //BANNED
 $lang['bn_no_players_banned']				= 'No hay jugadores baneados';

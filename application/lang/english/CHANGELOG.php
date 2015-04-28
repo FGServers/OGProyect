@@ -15,6 +15,7 @@ $lang['changelog']   = array(
 - [New]
 - The images were updated by the redesign.
 - New ads improvements for commander.
+- Tutorial as the redesign ogame.
 
 - [Fix]
 - When installing either did not put the name of the main planet administrator.

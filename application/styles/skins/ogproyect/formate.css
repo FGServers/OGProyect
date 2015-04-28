@@ -316,10 +316,15 @@ h1
   width                : 98%;
   text-align           : center;
 }
-
 #combox_container {margin-top:10px;}
 #combox_container_off{margin-top:10px;display:none;}
 #combox {display:block;position:relative;background-image:url(premium/comboxBild_6.jpg);width:513px;height:166px;}
 #combox:hover {text-decoration:none;}
 #anfang {position:absolute;top:7px;right:10px;font-family:tahoma;color:#FF8900;background-image:url(premium/transp.gif);font-size:17px;font-weight:700;}
 #ende {position:absolute;bottom:7px;right:10px;font-family:tahoma;color:#DCDCDC ;text-shadow: 0.1em 0.1em 0.05em #000;font-size:18px;font-weight:700;}
+
+.next_step {
+    float:right;
+    line-height:0px;
+    margin:0;
+}

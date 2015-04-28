@@ -401,7 +401,7 @@ class Overview extends OGPCore
 			if ( $user_planet['id'] != $this->_current_user['user_current_planet'] && $user_planet['planet_type'] != 3)
 			{
 				$url			= 'game.php?page=overview&cp=' . $user_planet['id'] . '&re=0';
-				$image			= DPATH . 'planets/small/s_' . $user_planet['image'] . '.jpg';
+				$image			= DPATH . 'planets/' . $user_planet['image'] . '.jpg';
 				$attributes		= 'height="50" width="50"';
 
 				$planet_block .= '<th>' . $user_planet['name'] . '<br>';

@@ -18,7 +18,7 @@ require ( OGP_ROOT . 'application/core/common.php' );
 
 $hooks->call_hook ( 'before_page' );
 
-switch ( $_GET['page'] )
+switch ( ( isset ( $_GET['page'] ) ? $_GET['page'] : NULL ) )
 {
 // ----------------------------------------------------------------------------------------------------------------------------------------------//
 	case 'changelog':
@@ -34,6 +34,10 @@ switch ( $_GET['page'] )
 	case 'renameplanet':
 		include_once ( OGP_ROOT . GAME_PATH . 'renameplanet.php' );
 		new RenamePlanet();
+	break;
+	case 'tutorial':
+		include_once ( OGP_ROOT . GAME_PATH . 'tutorial.php' );
+		new Tutorial();
 	break;
 // ----------------------------------------------------------------------------------------------------------------------------------------------//
 	case 'imperium':

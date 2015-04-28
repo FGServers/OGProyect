@@ -308,6 +308,20 @@ $table_users =
 `user_ally_register_time` int(11) NOT NULL DEFAULT '0',
 `user_ally_rank_id` int(11) NOT NULL DEFAULT '0',
 `user_banned` int(11) NOT NULL DEFAULT '0',
+`user_tutorial_1` int(11) DEFAULT NULL,
+`user_tutorial_2` int(11) DEFAULT NULL,
+`user_tutorial_3` int(11) DEFAULT NULL,
+`user_tutorial_4` int(11) DEFAULT NULL,
+`user_tutorial_5` int(11) DEFAULT NULL,
+`user_tutorial_6` int(11) DEFAULT NULL,
+`user_tutorial_6_mer` int(11) DEFAULT NULL,
+`user_tutorial_7` int(11) DEFAULT NULL,
+`user_tutorial_7_spy` int(11) DEFAULT NULL,
+`user_tutorial_8` int(11) DEFAULT NULL,
+`user_tutorial_8_exp` int(11) DEFAULT NULL,
+`user_tutorial_9` int(11) DEFAULT NULL,
+`user_tutorial_10` int(11) DEFAULT NULL,
+`user_tutorial_10_rec` int(11) DEFAULT NULL,
 PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1;";
 
@@ -379,6 +393,5 @@ $QryTablePlanets    .= "`planet_debris_crystal` bigint(11) NOT NULL default '0',
 $QryTablePlanets    .= "`invisible_start_time` int(11) NOT NULL default '0', ";
 $QryTablePlanets    .= "PRIMARY KEY  (`id`) ";
 $QryTablePlanets    .= ") ENGINE=MyISAM;";
-
 
 ?>
