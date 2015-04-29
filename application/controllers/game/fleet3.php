@@ -126,30 +126,30 @@ class Fleet3 extends OGPCore
 				$missiontype = array();
 			}
 		}
-		elseif ($_POST['planettype'] == 1 or $_POST['planettype'] == 3)
+		elseif (isset($_POST['planettype']) == 1 or $_POST['planettype'] == 3)
 		{
-			if ($_POST['ship208'] >= 1 && !$UsedPlanet)
+			if (isset($_POST['ship208']) >= 1 && !$UsedPlanet)
 			{
 				$missiontype = array ( 7 => $this->_lang['type_mission'][7] );
 			}
 
-			elseif ($_POST['ship210'] >= 1 && !$YourPlanet)
+			elseif (isset($_POST['ship210']) >= 1 && !$YourPlanet)
 			{
 				$missiontype = array ( 6 => $this->_lang['type_mission'][6] );
 			}
 
 
-			if ( $_POST['ship202'] >= 1 or
-				 $_POST['ship203'] >= 1 or
-				 $_POST['ship204'] >= 1 or
-				 $_POST['ship205'] >= 1 or
-				 $_POST['ship206'] >= 1 or
-				 $_POST['ship207'] >= 1 or
-				 $_POST['ship210'] >= 1 or
-				 $_POST['ship211'] >= 1 or
-				 $_POST['ship213'] >= 1 or
-				 $_POST['ship214'] >= 1 or
-				 $_POST['ship215'] >= 1 )
+			if ( isset($_POST['ship202']) >= 1 or
+				 isset($_POST['ship203']) >= 1 or
+				 isset($_POST['ship204']) >= 1 or
+				 isset($_POST['ship205']) >= 1 or
+				 isset($_POST['ship206']) >= 1 or
+				 isset($_POST['ship207']) >= 1 or
+				 isset($_POST['ship210']) >= 1 or
+				 isset($_POST['ship211']) >= 1 or
+				 isset($_POST['ship213']) >= 1 or
+				 isset($_POST['ship214']) >= 1 or
+				 isset($_POST['ship215']) >= 1 )
 			{
 
 				if ( !$YourPlanet )
@@ -238,6 +238,7 @@ class Fleet3 extends OGPCore
 			$input_parse['consumption']	=	Fleets_Lib::ship_consumption ( $Ship , $this->_current_user );
 			$input_parse['speed']		=	Fleets_Lib::fleet_max_speed ( "" , $Ship , $this->_current_user );
 
+			$input_extra = "";
 			$input_extra .= parent::$page->parse_template ( $input_template , $input_parse );
 		}
 
@@ -310,7 +311,7 @@ class Fleet3 extends OGPCore
 
 			$StayBlock = parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
 		}
-		elseif ( $missiontype[5] != '' )
+		elseif ( isset($missiontype[5]) != '' )
 		{
 			$stay_row['stay_type']			= 'holdingtime';
 
@@ -327,6 +328,8 @@ class Fleet3 extends OGPCore
 			$StayBlock = parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
 		}
 
+		$StayBlock = '';
+		
 		$parse['input_extra'] 			= $input_extra;
 		$parse['missionselector'] 		= $MissionSelector;
 		$parse['stayblock'] 			= $StayBlock;

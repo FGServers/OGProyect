@@ -111,6 +111,10 @@ class Fleet2 extends OGPCore
 				}
 				else
 				{
+					$fleet['fleetlist'] = isset($_GET['fleetlist']) ? $_GET['fleetlist'] : null;
+					$fleet['amount'] = isset($_GET['amount']) ? $_GET['amount'] : null;
+					$fleet['consumption'] = isset($_GET['consumption']) ? $_GET['consumption'] : null;
+					
 					$fleet['fleetarray'][$i]   	= $_POST["ship$i"];
 					$fleet['fleetlist']        .= $i . "," . $_POST["ship$i"] . ";";
 					$fleet['amount']           += $_POST["ship$i"];
