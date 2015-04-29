@@ -93,14 +93,14 @@ class Creator_Lib extends OGPCore
 			if ( $position == 1 || $position == 3 )
 			{
 				$PlanetType 		= array('desert');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(0,100);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			elseif ( $position == 2 || $position == 5 ) 
 			{
 				$PlanetType 		= array('dry');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-25,75);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 
@@ -108,42 +108,42 @@ class Creator_Lib extends OGPCore
 			elseif ( $position == 4 || $position == 7 )
 			{
 				$PlanetType 		= array('normal');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-50,50);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			elseif ( $position == 6 || $position == 9 )
 			{
 				$PlanetType 		= array('jungle');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-25,75);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			elseif ( $position == 8 || $position == 11 )
 			{
 				$PlanetType 		= array('water');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-75,25);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			elseif ( $position == 10 || $position == 13)
 			{
 				$PlanetType 		= array('ice');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-100,10);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			elseif ( $position == 12 || $position == 14)
 			{
 				$PlanetType 		= array('gas');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-75,25);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
 			else
 			{
 				$PlanetType 		= array('desert','dry','normal','jungle','water','ice','gas');
-				$PlanetDesign 		= array('_01','_02','_03','_04','_05','_06','_07','_08','_09','_10');
+				$PlanetDesign 		= array('_1','_2','_3','_4','_5','_6','_7','_8','_9','_10');
 				$planet['temp_min'] = mt_rand(-120,10);
 				$planet['temp_max'] = $planet['temp_min'] + 40;
 			}
