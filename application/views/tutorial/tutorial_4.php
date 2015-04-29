@@ -47,15 +47,15 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_4_lab}</span>
+                        <span>{tut_tusk_required_mission_4_lab} {lvl_required_lab}</span>
                         <span><img src="{dpath}img/{laboratory_1}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_4_scargo}</span>
+                        <span>{tut_tusk_required_mission_4_scargo} {lvl_required_ship}</span>
                         <span><img src="{dpath}img/{small_cargo_ship_1}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_4_motor}</span>
+                        <span>{tut_tusk_required_mission_4_motor} {lvl_required_drive}</span>
                         <span><img src="{dpath}img/{combustion_drive_2}.gif" height="11" width="13"></span>
                     </li>
                 </ul>
@@ -75,6 +75,7 @@ function toggleFormVisibility()
                             <li>Cuando hayas terminado tus investigaciones, construye una nave de carga pequeña en tu hangar.</li>
                         </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

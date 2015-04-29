@@ -47,15 +47,15 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_1_metal}</span>
+                        <span>{tut_tusk_required_mission_1_metal} {lvl_required_metall}</span>
                         <span><img src="{dpath}img/{metal_mine_4}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_1_crystal}</span>
+                        <span>{tut_tusk_required_mission_1_crystal} {lvl_required_cristal}</span>
                         <span><img src="{dpath}img/{cristal_mine_2}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_1_solar}</span>
+                        <span>{tut_tusk_required_mission_1_solar} {lvl_required_solar}</span>
                         <span><img src="{dpath}img/{solar_plant_4}.gif" height="11" width="13"></span>
                     </li>
                 </ul>
@@ -77,6 +77,7 @@ function toggleFormVisibility()
                         <li>Generalmente, la secuencia de construcción preferida de los jugadores es: Solar 1, Metal 1, Metal 2, Solar 2, Metal 3, Metal 4, Solar 3, Cristal 1, Cristal 2</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

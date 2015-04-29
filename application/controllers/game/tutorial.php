@@ -71,6 +71,8 @@ class Tutorial extends OGPCore
 		$requer 			= 0;
 		$page       		= '';
 		$button				= '';
+		$messages			= '';
+		$m 					= 0;
 		$tut_page 			= isset ( $_GET['mision'] ) ? $_GET['mision'] : NULL;
 
 		switch ( $tut_page )
@@ -110,7 +112,7 @@ class Tutorial extends OGPCore
 					$parse['recycle'] = 'accept';
 					++$requer;
 				}else{
-					$parse['recycle'] = 'delete';
+					$parse['recycle'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 1 and $this->_current_user['user_tutorial_10'] == 0 ){
@@ -122,19 +124,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_10` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=finish', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=10', 1 );
 				}
 
 				if($requer == 1 and $this->_current_user['user_tutorial_10'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=10&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_10'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_10'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=finish\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_10' );
@@ -154,7 +159,7 @@ class Tutorial extends OGPCore
 					$parse['found_colony'] = 'accept';
 					++$requer;
 				}else{
-					$parse['found_colony'] = 'delete';
+					$parse['found_colony'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 1 and $this->_current_user['user_tutorial_9'] == 0 ){
@@ -167,19 +172,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_9` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=10', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=9', 1 );
 				}
 
 				if($requer == 1 and $this->_current_user['user_tutorial_9'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=9&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_9'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_9'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=10\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 
@@ -199,7 +207,7 @@ class Tutorial extends OGPCore
 					$parse['expedition'] = 'accept';
 					++$requer;
 				}else{
-					$parse['expedition'] = 'delete';
+					$parse['expedition'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 1 and $this->_current_user['user_tutorial_8'] == 0 ){
@@ -213,19 +221,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_8` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=9', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=8', 1 );
 				}
 
 				if($requer == 1 and $this->_current_user['user_tutorial_8'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=8&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_8'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_8'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=9\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_8' );
@@ -243,13 +254,14 @@ class Tutorial extends OGPCore
 					$parse['probes'] = 'accept';
 					++$requer;
 				}else{
-					$parse['probes'] = 'delete';
+					$parse['lvl_required_probes']  = '<a href="game.php?page=shipyard">('. $this->_current_planet[$this->_resource[210]] .'/1)</a>';
+					$parse['probes'] = 'none';
 				}
 				if($this->_current_user['user_tutorial_7_spy'] >= 1){
 					$parse['spy'] = 'accept';
 					++$requer;
 				}else{
-					$parse['spy'] = 'delete';
+					$parse['spy'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 2 and $this->_current_user['user_tutorial_7'] == 0 ){
@@ -262,19 +274,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_7` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=8', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=7', 1 );
 				}
 
 				if($requer == 2 and $this->_current_user['user_tutorial_7'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=7&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_7'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_7'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=8\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 
@@ -293,13 +308,14 @@ class Tutorial extends OGPCore
 					$parse['storeage'] = 'accept';
 					++$requer;
 				}else{
-					$parse['storeage'] = 'delete';
+					$parse['lvl_required_store']  = '<a href="game.php?page=resources">('. $this->_current_planet[$this->_resource[22]] .'/1)</a>';
+					$parse['storeage'] = 'none';
 				}
 				if($this->_current_user['user_tutorial_6_mer'] >= 1){
 					$parse['merchand'] = 'accept';
 					++$requer;
 				}else{
-					$parse['merchand'] = 'delete';
+					$parse['merchand'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 2 and $this->_current_user['user_tutorial_6'] == 0 ){
@@ -314,19 +330,22 @@ class Tutorial extends OGPCore
 					parent::$db->query("UPDATE ".USERS."
 												SET `user_tutorial_6` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=7', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=6', 1 );
 				}
 
 				if($requer == 2 and $this->_current_user['user_tutorial_6'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=6&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_6'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_6'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=7\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_6' );
@@ -346,19 +365,19 @@ class Tutorial extends OGPCore
 					$parse['planet_rename'] = 'accept';
 					++$requer;
 				}else{
-					$parse['planet_rename'] = 'delete';
+					$parse['planet_rename'] = 'none';
 				}
 				if($this->_extra_count['buddys_count'] >= 1){
 					$parse['buddy_count'] = 'accept';
 					++$requer;
 				}else{
-					$parse['buddy_count'] = 'delete';
+					$parse['buddy_count'] = 'none';
 				}
 				if($this->_current_user['user_ally_id'] != 0 and $this->_extra_count['alliance_count'] >= 4){
 					$parse['alliance_count'] = 'accept';
 					++$requer;
 				}else{
-					$parse['alliance_count'] = 'delete';
+					$parse['alliance_count'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 3 and $this->_current_user['user_tutorial_5'] == 0 ){
@@ -370,19 +389,22 @@ class Tutorial extends OGPCore
 					parent::$db->query("UPDATE ".USERS."
 												SET `user_tutorial_5` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=6', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=5', 1 );
 				}
 
 				if($requer == 3 and $this->_current_user['user_tutorial_5'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=5&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_5'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_5'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=6\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 
@@ -401,19 +423,22 @@ class Tutorial extends OGPCore
 					$parse['laboratory_1'] = 'accept';
 					++$requer;
 				}else{
-					$parse['laboratory_1'] = 'delete';
+					$parse['lvl_required_lab']  = '<a href="game.php?page=station">('.$this->_current_planet[$this->_resource[31]] .'/1)</a>';
+					$parse['laboratory_1'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[202]] >= 1){
 					$parse['small_cargo_ship_1'] = 'accept';
 					++$requer;
 				}else{
-					$parse['small_cargo_ship_1'] = 'delete';
+					$parse['lvl_required_ship']  = '<a href="game.php?page=shipyard">('.$this->_current_planet[$this->_resource[202]] .'/1)</a>';
+					$parse['small_cargo_ship_1'] = 'none';
 				}
 				if($this->_current_user[$this->_resource[115]] >= 2){
 					$parse['combustion_drive_2'] = 'accept';
 					++$requer;
 				}else{
-					$parse['combustion_drive_2'] = 'delete';
+					$parse['lvl_required_drive']  = '<a href="game.php?page=research">('.$this->_current_user[$this->_resource[115]] .'/2)</a>';
+					$parse['combustion_drive_2'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 3 and $this->_current_user['user_tutorial_4'] == 0 ){
@@ -424,19 +449,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_4` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 					UpdateResources_Lib::update_resource ( $this->_current_user, $this->_current_planet, time() );
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=5', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=4', 1 );
 				}
 
 				if($requer == 3 and $this->_current_user['user_tutorial_4'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=4&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_3'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_4'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=5\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_4' );
@@ -454,19 +482,22 @@ class Tutorial extends OGPCore
 					$parse['metal_mine_10'] = 'accept';
 					++$requer;
 				}else{
-					$parse['metal_mine_10'] = 'delete';
+					$parse['lvl_required_met_2']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[1]] .'/10)</a>';
+					$parse['metal_mine_10'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[2]] >= 7){
 					$parse['cristal_mine_7'] = 'accept';
 					++$requer;
 				}else{
-					$parse['cristal_mine_7'] = 'delete';
+					$parse['lvl_required_crist_2']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[2]] .'/7)</a>';
+					$parse['cristal_mine_7'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[3]] >= 5){
 					$parse['deuterium_sintetizer_5'] = 'accept';
 					++$requer;
 				}else{
-					$parse['deuterium_sintetizer_5'] = 'delete';
+					$parse['lvl_required_deute_2']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[3]] .'/5)</a>';
+					$parse['deuterium_sintetizer_5'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 3 and $this->_current_user['user_tutorial_3'] == 0 ){
@@ -478,19 +509,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_3` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 					UpdateResources_Lib::update_resource ( $this->_current_user, $this->_current_planet, time() );
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=4', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=3', 1 );
 				}
 
 				if($requer == 3 and $this->_current_user['user_tutorial_3'] == 0){
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=3&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_3'] == 1){
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_3'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=4\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 
@@ -509,25 +543,29 @@ class Tutorial extends OGPCore
 					$parse['deuterium_sintetizer_2'] = 'accept';
 					++$requer;
 				}else{
-					$parse['deuterium_sintetizer_2'] = 'delete';
+					$parse['lvl_required_deute']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[3]] .'/2)</a>';
+					$parse['deuterium_sintetizer_2'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[14]] >= 2){
 					$parse['robot_factory_2'] = 'accept';
 					++$requer;
 				}else{
-					$parse['robot_factory_2'] = 'delete';
+					$parse['lvl_required_robot']  = '<a href="game.php?page=station">('.$this->_current_planet[$this->_resource[14]] .'/2)</a>';
+					$parse['robot_factory_2'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[21]] >= 1){
 					$parse['hangar_1'] = 'accept';
 					++$requer;
 				}else{
-					$parse['hangar_1'] = 'delete';
+					$parse['lvl_required_hangar']  = '<a href="game.php?page=station">('.$this->_current_planet[$this->_resource[21]] .'/1)</a>';
+					$parse['hangar_1'] = 'none';
 				}
 				if($this->_current_planet[$this->_resource[401]] >= 1){
 					$parse['rocket_launcher_1'] = 'accept';
 					++$requer;
 				}else{
-					$parse['rocket_launcher_1'] = 'delete';
+					$parse['lvl_required_roket']  = '<a href="game.php?page=shipyard">('.$this->_current_planet[$this->_resource[401]] .'/1)</a>';
+					$parse['rocket_launcher_1'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 and $requer == 4 and $this->_current_user['user_tutorial_2'] == 0){
@@ -540,19 +578,22 @@ class Tutorial extends OGPCore
 												SET `user_tutorial_2` = '1' 
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=3', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=2', 1 );
 				}
 
 				if($requer == 4 and $this->_current_user['user_tutorial_2'] == 0) {
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=2&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_2'] == 1) {
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_2'].'</p>';
 					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=3\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else {
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_2' );
@@ -570,21 +611,24 @@ class Tutorial extends OGPCore
 					$parse['metal_mine_4'] = 'accept';
 					++$requer;
 				} else {
-					$parse['metal_mine_4'] = 'delete';
+					$parse['lvl_required_metall']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[1]] .'/4)</a>';
+					$parse['metal_mine_4'] 		   = 'none';
 				}
 
 				if($this->_current_planet[$this->_resource[2]] >= 2) {
 					$parse['cristal_mine_2'] = 'accept';
 					++$requer;
 				} else {
-					$parse['cristal_mine_2'] = 'delete';
+					$parse['lvl_required_cristal']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[2]] .'/2)</a>';
+					$parse['cristal_mine_2'] = 'none';
 				}
 
 				if($this->_current_planet[$this->_resource[4]] >= 4) {
 					$parse['solar_plant_4'] = 'accept';
 					++$requer;
 				} else {
-					$parse['solar_plant_4'] = 'delete';
+					$parse['lvl_required_solar']  = '<a href="game.php?page=resources">('.$this->_current_planet[$this->_resource[4]] .'/4)</a>';
+					$parse['solar_plant_4'] = 'none';
 				}
 
 				if( isset ( $_GET['continue'] ) == 1 && $requer == 3 && $this->_current_user['user_tutorial_1'] == 0){
@@ -596,19 +640,22 @@ class Tutorial extends OGPCore
 													WHERE `user_id` = '". $this->_current_user['user_id'] ."';");
 
 					UpdateResources_Lib::update_resource ( $this->_current_user, $this->_current_planet, time() );
-					Functions_Lib::message ( '<p style="color:lime;">'.$this->_lang['tut_mission_complete'].'</p>' , 'game.php?page=tutorial&mision=2', 3 );
+					Functions_Lib::redirect ( 'game.php?page=tutorial&mision=1', 1 );
 				}
 
 				if($requer == 3 and $this->_current_user['user_tutorial_1'] == 0){
-					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=1&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
+					$button   .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=1&continue=1\'" value="'. $this->_lang['tut_btn_reward_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				elseif($this->_current_user['user_tutorial_1'] == 1){
-					$button .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=2\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
+					$messages .= '<p style="color:#9c0;text-align:left;">'.$this->_lang['tut_tusk_messages_mission_1'].'</p>';
+					$button   .= '<input class="next_step" type="button" onclick="window.location = \'game.php?page=tutorial&mision=2\'" value="'. $this->_lang['tut_btn_next_mission_tutorial'] .'" style="width:150px;height:30px;"/>';
 				}
 				else{
-					$button .= '';
+					$messages .= '';
+					$button   .= '';
 				}
 
+				$parse['messages']  = $messages;
 				$parse['button']	= $button;
 
 				$page .= parent::$page->get_template ( 'tutorial/tutorial_1' );

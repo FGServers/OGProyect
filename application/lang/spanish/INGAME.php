@@ -1128,7 +1128,6 @@ $lang['tut_tusk_required_mission_7_spy']	= 'Espía los planetas de otro jugador.
 $lang['tut_tusk_required_mission_8_exped']	= 'Efectúa una expedición';
 $lang['tut_tusk_required_mission_9_colony']	= 'Funda una colonia';
 $lang['tut_tusk_required_mission_10_recyc']	= 'Recolectar 1 campo de escombros';
-
 //TUTORIAL TUSK WORK ALL MISSION REWARD
 $lang['tut_tusk_reward_mission_1']			= 'Recompensa: 150 unidades de metal + 75 unidades de cristal';
 $lang['tut_tusk_reward_mission_2']			= 'Recompensa: +1 Lanza misiles';
@@ -1140,6 +1139,17 @@ $lang['tut_tusk_reward_mission_7']			= 'Recompensa: 2 Sondas de espionaje';
 $lang['tut_tusk_reward_mission_8']			= 'Recompensa: 2 Cazadores pesados, 5 naves de carga pequeñas';
 $lang['tut_tusk_reward_mission_9']			= 'Recompensa: Modo comandante durante 3 días';
 $lang['tut_tusk_reward_mission_10']			= 'Recompensa: 1 Reciclador';
+//FINISH TUSK MISSION MESSAGE
+$lang['tut_tusk_messages_mission_1']		= '¡Felicitaciones! Con las construcción exitosa de tus primeras minas has asegurado la base de abastecimiento de tu planeta.';
+$lang['tut_tusk_messages_mission_2']		= '¡Bien hecho! Ahora podés proteger tus planetas de ataques.';
+$lang['tut_tusk_messages_mission_3']		= '¡Estupendo! Has aprendido todo sobre los ajustes de la producción y te has asegurado un suministro estable de recursos. Ahora sabes cómo construir edificios y dónde encontrar toda la información importante.';
+$lang['tut_tusk_messages_mission_4']		= '¡Felicitaciones! Ahora has aprendido como se investiga y se construye una nave. Con esto has adoptado dos de los elementos más importantes del juego. Mira a tu alrededor y descubre que más puedes aprender de las otras tecnologías.';
+$lang['tut_tusk_messages_mission_5']		= '¡Genial! Has aprendido cómo establecer contacto con otros jugadores y cómo convertirte en miembro de una alianza.';
+$lang['tut_tusk_messages_mission_6']		= '¡Felicitaciones! Ha completado su primer comercio. Utilice esta función para recibir rápidamente combinaciones ideales de recursos para su próxima empresa.';
+$lang['tut_tusk_messages_mission_7']		= '¡Perfecto! Has enviado tu primera flota y has aprendido como se obtiene informaciones sobre planetas desconocidos.';
+$lang['tut_tusk_messages_mission_8']		= '¡Estupendo!, has aprendido como conducir expediciones satisfactoriamente.';
+$lang['tut_tusk_messages_mission_9']		= '¡Bien hecho! Usted ha aprendido cómo expandir su imperio. Ahora todas las galaxias son su ostra. Como premio recibirá una característica premium, su primer comandante, quien, entre otras cosas que usted proporciona con mejores vistas generales y filtros. Puede encargar varios edificios a la vez con su ayuda.';
+$lang['tut_tusk_messages_mission_10']		= '¡Genial! Usted ha logrado recuperar con éxito los recursos del campo de escombros!';
 //TUTORIAL OTHER TEXT
 $lang['tut_tusk']							= 'Misiones:';
 $lang['tut_congratulation'] 				= 'Felicitaciones';

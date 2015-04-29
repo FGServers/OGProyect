@@ -47,15 +47,15 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_3_metal}</span>
+                        <span>{tut_tusk_required_mission_3_metal} {lvl_required_met_2}</span>
                         <span><img src="{dpath}img/{metal_mine_10}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_3_cristal}</span>
+                        <span>{tut_tusk_required_mission_3_cristal} {lvl_required_crist_2}</span>
                         <span><img src="{dpath}img/{cristal_mine_7}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_3_deute}</span>
+                        <span>{tut_tusk_required_mission_3_deute} {lvl_required_deute_2}</span>
                         <span><img src="{dpath}img/{deuterium_sintetizer_5}.gif" height="11" width="13"></span>
                     </li>
                 </ul>
@@ -73,6 +73,7 @@ function toggleFormVisibility()
                         <li>Si la energía se vuelve escasa, puedes reducir la potencia de algunas estructuras defensivas en las configuraciones de abastecimiento y de esta manera disminuir la producción de los recursos que no sean tan necesarios.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

@@ -65,6 +65,7 @@ function toggleFormVisibility()
                             <li>Tambien puedes volar al campo de escombros directamente de la visión de la galaxia sobre el tooltip de campo de escombros.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
 	</table>

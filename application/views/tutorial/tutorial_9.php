@@ -64,6 +64,7 @@ function toggleFormVisibility()
                             <li>Siempre es una buena idea, enviar algunos recursos junto con el colonizador.</li>
                         </ul>
                 </div>
+                {messages}
             </th>
         </tr>
 	</table>

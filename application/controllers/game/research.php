@@ -260,6 +260,7 @@ class Research extends OGPCore
 		$return				= TRUE;
 		$current_building	= '';
 		$element_id			= 0;
+		$i 					= 0;
 
 		if ( $this->_current_planet['planet_b_building_id'] != 0 )
 		{
@@ -267,6 +268,9 @@ class Research extends OGPCore
 
 			if ( strpos ( $current_queue , ';' ) )
 			{	
+				if(isset($arreglo[$i]))
+				{
+
 					$queue	= explode ( ';' , $current_queue );
 
 					for ( $i = 0 ; $i < MAX_BUILDING_QUEUE_SIZE ; $i++ )
@@ -279,6 +283,7 @@ class Research extends OGPCore
 							break;
 						}
 					}
+				}
 			} 
 			else
 			{

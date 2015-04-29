@@ -47,7 +47,7 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_7_probe}</span>
+                        <span>{tut_tusk_required_mission_7_probe} {lvl_required_probes}</span>
                         <span><img src="{dpath}img/{probes}.gif" height="11" width="13"></span>
                     </li>
                     <li>
@@ -71,6 +71,7 @@ function toggleFormVisibility()
                         <li>Después serás conducido a la visión de la flota, donde podrás ver todas tus flotas activas.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

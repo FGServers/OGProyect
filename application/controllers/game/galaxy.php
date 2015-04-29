@@ -434,9 +434,9 @@ class Galaxy extends OGPCore
 														WHERE u.user_id = (SELECT `id_owner`
 																		FROM " . PLANETS . "
 																			WHERE galaxy = ".$g."  AND
-																				system = ".$s." AND
-																				planet = ".$i." AND
-																				planet_type = 1 LIMIT 1) LIMIT 1");
+																					system = ".$s." AND
+																					planet = ".$i." AND
+																					planet_type = 1 LIMIT 1) LIMIT 1");
 
 		$user_points	= $this->_noob->return_points ( $this->_current_user['user_id'] , $tempvar3['id'] );
 		$MyGameLevel	= $user_points['user_points'];

@@ -59,14 +59,15 @@ class NoobsProtection_Lib extends OGPCore
 	public function return_points ( $current_user_id , $other_user_id )
 	{
 		$user_points	= parent::$db->query_fetch ( "SELECT
-														(SELECT user_statistic_total_points
+														(SELECT `user_statistic_total_points`
 															FROM " . USERS_STATISTICS . "
 																WHERE `user_statistic_user_id` = ". $current_user_id ."
 																) AS user_points,
-														(SELECT user_statistic_total_points
+														(SELECT `user_statistic_total_points`
 															FROM " . USERS_STATISTICS . "
 																WHERE `user_statistic_user_id` = ". $other_user_id ."
-																) AS target_points" );
+																) AS target_points" 
+													);
 		return $user_points;
 	}
 }

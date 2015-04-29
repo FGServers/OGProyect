@@ -73,6 +73,7 @@ function toggleFormVisibility()
                         <li>Para pertenecer a una alianza, puedes unirte a una alianza ya creada o fundar tu propia alianza. Esto lo puedes hacer en la opcion "Alianza" del menú. Si deseas aplicar una solicitud para otra alianza, entonces elige la alianza deseada y luego haz clic en el símbolo de solicitud.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

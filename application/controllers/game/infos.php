@@ -495,7 +495,7 @@ class Infos extends OGPCore
 
     private function ShowProductionTable ( $Template )
     {
-        $BuildLevelFactor 	= isset($this->_current_planet[ $this->_resource[$this->_element_id]."_porcent" ]);
+        $BuildLevelFactor   = isset($this->_current_planet[ $this->_resource[$this->_element_id]."_porcent" ]);
         $BuildTemp        	= $this->_current_planet[ 'temp_max' ];
         $CurrentBuildtLvl 	= $this->_current_planet[ $this->_resource[$this->_element_id] ];
         $BuildLevel       	= ($CurrentBuildtLvl > 0) ? $CurrentBuildtLvl : 1;
@@ -506,10 +506,10 @@ class Infos extends OGPCore
 		$engineer_boost		= 1 + ( 1 * ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_engineer'] ) ? ENGINEER_ENERGY : 0 ) );
 
 		// PRODUCTION FORMULAS
-		$metal_prod			= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['metal'] ));
-		$crystal_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['crystal'] ));
-		$deuterium_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['deuterium'] ));
-		$energy_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['energy'] ));
+		$metal_prod         = eval (isset( $this->_prod_grid[$this->_element_id]['formule']['metal'] ) );
+		$crystal_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['crystal'] ) );
+		$deuterium_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['deuterium'] ) );
+		$energy_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['energy'] ) );
 
 		// PRODUCTION
 		$Prod[1]			= Production_Lib::production_amount ( $metal_prod , $geologe_boost );

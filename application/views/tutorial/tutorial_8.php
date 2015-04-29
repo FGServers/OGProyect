@@ -64,6 +64,7 @@ function toggleFormVisibility()
                             <li> El resultado de una expedición es siempre incierta, por lo tanto, no arriesgues tu flota entera de inmediato.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

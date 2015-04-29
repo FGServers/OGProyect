@@ -47,19 +47,19 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_2_deute}</span>
+                        <span>{tut_tusk_required_mission_2_deute} {lvl_required_deute}</span>
                         <span><img src="{dpath}img/{deuterium_sintetizer_2}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_2_robot}</span>
+                        <span>{tut_tusk_required_mission_2_robot} {lvl_required_robot}</span>
                         <span><img src="{dpath}img/{robot_factory_2}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_2_shipya}</span>
+                        <span>{tut_tusk_required_mission_2_shipya} {lvl_required_hangar}</span>
                         <span><img src="{dpath}img/{hangar_1}.gif" height="11" width="13"></span>
                     </li>
                     <li>
-                        <span>{tut_tusk_required_mission_2_missil}</span>
+                        <span>{tut_tusk_required_mission_2_missil} {lvl_required_roket}</span>
                         <span><img src="{dpath}img/{rocket_launcher_1}.gif" height="11" width="13"></span>
                     </li>
                 </ul>
@@ -82,6 +82,7 @@ function toggleFormVisibility()
                         <li>Después de haber terminado la construcción del hangar, puedes iniciar la construcción del lanzamisiles.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
     </table>

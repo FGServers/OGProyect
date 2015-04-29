@@ -47,7 +47,7 @@ function toggleFormVisibility()
                 <h3 style="text-align:left;">{tut_tusk}</h3>
                 <ul style="text-align:left;">
                     <li>
-                        <span>{tut_tusk_required_mission_6_store}</span>
+                        <span>{tut_tusk_required_mission_6_store} {lvl_required_store}</span>
                         <span><img src="{dpath}img/{storeage}.gif" height="11" width="13"></span>
                     </li>
                     <li>
@@ -70,6 +70,7 @@ function toggleFormVisibility()
                         <li>Si necesitas más materia oscura la puedes conseguir en el Casino de oficiales.</li>
                     </ul>
                 </div>
+                {messages}
             </th>
         </tr>
 	</table>

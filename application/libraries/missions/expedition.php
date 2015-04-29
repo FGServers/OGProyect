@@ -50,7 +50,7 @@ class Expedition extends Missions
 						$ship_number 					= $ship[0];
 						$ship_amount 					= $ship[1];
 						$current_fleet[$ship_number]	= $ship_amount;
-						$fleet_capacity                += parent::$_pricelist[$ship_number]['capacity'] * $ship_amount;
+						$fleet_capacity                += $this->_pricelist[$ship_number]['capacity'] * $ship_amount;
 						$fleet_points   			   += ( $ship_amount * $ships_points[$ship_number] );
 					}
 				}
