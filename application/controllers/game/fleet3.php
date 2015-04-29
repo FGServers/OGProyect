@@ -238,6 +238,7 @@ class Fleet3 extends OGPCore
 			$input_parse['consumption']	=	Fleets_Lib::ship_consumption ( $Ship , $this->_current_user );
 			$input_parse['speed']		=	Fleets_Lib::fleet_max_speed ( "" , $Ship , $this->_current_user );
 
+			$input_extra = "";
 			$input_extra .= parent::$page->parse_template ( $input_template , $input_parse );
 		}
 
@@ -295,7 +296,6 @@ class Fleet3 extends OGPCore
 		#####################################################################################################
 		// STAY / EXPEDITION BLOCKS
 		#####################################################################################################
-		$StayBlock = '';
 		if ( $planet == 16 )
 		{
 			$stay_row['stay_type']			= 'expeditiontime';
@@ -328,6 +328,8 @@ class Fleet3 extends OGPCore
 			$StayBlock .= parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
 		}
 
+		$StayBlock = '';
+		
 		$parse['input_extra'] 			= $input_extra;
 		$parse['missionselector'] 		= $MissionSelector;
 		$parse['stayblock'] 			= $StayBlock;
