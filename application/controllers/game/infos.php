@@ -610,10 +610,13 @@ class Infos extends OGPCore
         return $Table;
     }
 
-    private function ShowRapidFireTo( )
+    private function ShowRapidFireTo()
     {
         $ResultString = "";
-        for ($Type = 200; $Type < 500; $Type++)
+		$array = array (202,203,204,205,206,207,208,209,210,211,212,213,214,215,401,402,403,404,405,406,407,408);
+
+		foreach ($array as $Type)
+		//for ($Type = 200; $Type <= 500; $Type++)
         {
             if ( $this->_combat_caps[$this->_element_id]['sd'][$Type] > 1 )
             {
@@ -626,7 +629,10 @@ class Infos extends OGPCore
     private function ShowRapidFireFrom()
     {
         $ResultString = "";
-        for ($Type = 200; $Type < 500; $Type++)
+		$array = array (202,203,204,205,206,207,208,209,210,211,212,213,214,215);
+		
+		foreach ($array as $Type)
+		//for ($Type = 200; $Type <= 500; $Type++)
         {
             if ( $this->_combat_caps[$Type]['sd'][$this->_element_id] > 1 )
             {
