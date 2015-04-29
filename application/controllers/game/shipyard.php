@@ -129,8 +129,6 @@ class Shipyard extends OGPCore
 
 			if ( strpos ( $CurrentQueue , ";" ) )
 			{
-				$i 		     	= 0;
-				if(isset($arreglo[$i])){
 				// FIX BY LUCKY - IF THE SHIPYARD IS IN QUEUE THE USER CANT RESEARCH ANYTHING...
 				$QueueArray		= explode (";", $CurrentQueue);
 
@@ -145,7 +143,6 @@ class Shipyard extends OGPCore
 					}
 				}
 				// END - FIX
-				}
 			}
 			else
 			{

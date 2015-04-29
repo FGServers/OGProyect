@@ -188,8 +188,6 @@ class Defense extends OGPCore
 			$CurrentQueue = $this->_current_planet['planet_b_building_id'];
 			if (strpos ($CurrentQueue, ";"))
 			{
-				$i 		     	= 0;
-				if(isset($arreglo[$i])){
 				// FIX BY LUCKY - IF THE SHIPYARD IS IN QUEUE THE USER CANT RESEARCH ANYTHING...
 				$QueueArray		= explode (";", $CurrentQueue);
 
@@ -204,7 +202,6 @@ class Defense extends OGPCore
 					}
 				}
 				// END - FIX
-				}
 			}
 			else
 			{
