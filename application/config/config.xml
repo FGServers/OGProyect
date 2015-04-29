@@ -14,7 +14,7 @@
 	</config>
 	<config>
 		<name>lang</name>
-		<value>spanish</value>
+		<value>english</value>
 	</config>
 	<config>
 		<name>game_speed</name>
@@ -22,7 +22,7 @@
 	</config>
 	<config>
 		<name>fleet_speed</name>
-		<value>2500</value>
+		<value>125000</value>
 	</config>
 	<config>
 		<name>resource_multiplier</name>
@@ -30,7 +30,7 @@
 	</config>
 	<config>
 		<name>admin_email</name>
-		<value>samurai.rukasu@hotmail.com</value>
+		<value>jona@jona.com</value>
 	</config>
 	<config>
 		<name>forum_url</name>
@@ -78,7 +78,7 @@
 	</config>
 	<config>
 		<name>noobprotection</name>
-		<value>1</value>
+		<value>0</value>
 	</config>
 	<config>
 		<name>noobprotectiontime</name>
@@ -90,11 +90,11 @@
 	</config>
 	<config>
 		<name>modules</name>
-		<value>1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;</value>
+		<value>1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;1;</value>
 	</config>
 	<config>
 		<name>initial_fields</name>
-		<value>200</value>
+		<value>163</value>
 	</config>
 	<config>
 		<name>metal_basic_income</name>
@@ -134,15 +134,15 @@
 	</config>
 	<config>
 		<name>stat</name>
-		<value>1</value>
-	</config>
-	<config>
-		<name>stat_level</name>
 		<value>0</value>
 	</config>
 	<config>
+		<name>stat_level</name>
+		<value>2</value>
+	</config>
+	<config>
 		<name>stat_last_update</name>
-		<value>1430076217</value>
+		<value>1430273117</value>
 	</config>
 	<config>
 		<name>premium_url</name>
@@ -162,7 +162,7 @@
 	</config>
 	<config>
 		<name>last_cleanup</name>
-		<value>1430054617</value>
+		<value>1430263375</value>
 	</config>
 	<config>
 		<name>game_installed</name>
