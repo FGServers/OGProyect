@@ -33,48 +33,33 @@ class BBCode_Lib
 	 * @param string $string (default: '')
 	 * @return void
 	 */
-	public function bbCode ( $string = '' )
-	{
-		$pattern = array(
-		    '/\\n/',
-		    '/\\r/',
-		    '/\[list\](.*?)\[\/list\]/ise',
-		    '/\[b\](.*?)\[\/b\]/is',
-		    '/\[strong\](.*?)\[\/strong\]/is',
-		    '/\[i\](.*?)\[\/i\]/is',
-		    '/\[u\](.*?)\[\/u\]/is',
-		    '/\[s\](.*?)\[\/s\]/is',
-		    '/\[del\](.*?)\[\/del\]/is',
-		    '/\[url=(.*?)\](.*?)\[\/url\]/ise',
-		    '/\[email=(.*?)\](.*?)\[\/email\]/is',
-		    '/\[img](.*?)\[\/img\]/ise',
-		    '/\[color=(.*?)\](.*?)\[\/color\]/is',
-		    '/\[font=(.*?)\](.*?)\[\/font\]/ise',
-		    '/\[bg=(.*?)\](.*?)\[\/bg\]/ise',
-		    '/\[size=(.*?)\](.*?)\[\/size\]/ise'
-		);
-
-		$replace = array(
-		    '<br/>',
-		    '',
-		    '$this->sList(\'\\1\')',
-		    '<b>\1</b>',
-		    '<strong>\1</strong>',
-		    '<i>\1</i>',
-		    '<span style="text-decoration: underline;">\1</span>',
-		    '<span style="text-decoration: line-through;">\1</span>',
-		    '<span style="text-decoration: line-through;">\1</span>',
-		    '$this->urlfix(\'\\1\',\'\\2\')',
-		    '<a href="mailto:\1" title="\1">\2</a>',
-		    '$this->imagefix(\'\\1\')',
-		    '<span style="color: \1;">\2</span>',
-		    '$this->fontfix(\'\\1\',\'\\2\')',
-		    '$this->bgfix(\'\\1\',\'\\2\')',
-		    '$this->sizefix(\'\\1\',\'\\2\')'
-		);
-
-		return preg_replace ( $pattern , $replace , nl2br ( stripslashes ( $string ) ) );
-	}
+	 public function bbCode ($string) {
+        $tags = 'b|i|size|color|center|quote|url|img';
+        while (preg_match_all('`\[('.$tags.')=?(.*?)\](.+?)\[/\1\]`', $string, $matches)) foreach ($matches[0] as $key => $match) {
+            list($tag, $param, $innertext) = array($matches[1][$key], $matches[2][$key], $matches[3][$key]);
+            switch ($tag) {
+                case 'b': $replacement = "<strong>$innertext</strong>"; break;
+                case 'i': $replacement = "<em>$innertext</em>"; break;
+                case 'size': $replacement = "<span style=\"font-size: $param;\">$innertext</span>"; break;
+                case 'color': $replacement = "<span style=\"color: $param;\">$innertext</span>"; break;
+                case 'center': $replacement = "<div class=\"centered\">$innertext</div>"; break;
+                case 'quote': $replacement = "<blockquote>$innertext</blockquote>" . $param? "<cite>$param</cite>" : ''; break;
+                case 'url': $replacement = '<a href="' . ($param? $param : $innertext) . "\">$innertext</a>"; break;
+                case 'img':
+                    list($width, $height) = preg_split('`[Xx]`', $param);
+                    $replacement = "<img src=\"$innertext\" " . (is_numeric($width)? "width=\"$width\" " : '') . (is_numeric($height)? "height=\"$height\" " : '') . '/>';
+                break;
+                case 'video':
+                    $videourl = parse_url($innertext);
+                    parse_str($videourl['query'], $videoquery);
+                    if (strpos($videourl['host'], 'youtube.com') !== FALSE) $replacement = '<embed src="http://www.youtube.com/v/' . $videoquery['v'] . '" type="application/x-shockwave-flash" width="425" height="344"></embed>';
+                    if (strpos($videourl['host'], 'google.com') !== FALSE) $replacement = '<embed src="http://video.google.com/googleplayer.swf?docid=' . $videoquery['docid'] . '" width="400" height="326" type="application/x-shockwave-flash"></embed>';
+                break;
+            }
+            $string = str_replace($match, $replacement, $string);
+        }
+        return $string;
+    } 
 
 	/**
 	 * sList function.
