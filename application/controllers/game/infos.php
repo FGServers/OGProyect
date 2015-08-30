@@ -104,7 +104,7 @@ class Infos extends OGPCore
             $PageTPL	= parent::$page->get_template ('infos/info_officiers_general');
         }
 
-        //Sólo hay destroy en <200
+        //SÃ³lo hay destroy en <200
         if($this->_element_id < 200 && $this->_element_id != 33 && $this->_element_id != 41)
         {
 	        $DestroyTPL           = parent::$page->get_template ('infos/info_buildings_destroy');
@@ -506,10 +506,10 @@ class Infos extends OGPCore
 		$engineer_boost		= 1 + ( 1 * ( Officiers_Lib::is_officier_active ( $this->_current_user['premium_officier_engineer'] ) ? ENGINEER_ENERGY : 0 ) );
 
 		// PRODUCTION FORMULAS
-		$metal_prod         = eval (isset( $this->_prod_grid[$this->_element_id]['formule']['metal'] ) );
-		$crystal_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['crystal'] ) );
-		$deuterium_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['deuterium'] ) );
-		$energy_prod		= eval (isset( $this->_prod_grid[$this->_element_id]['formule']['energy'] ) );
+		$metal_prod		= eval ( $this->_prod_grid[$this->_element_id]['formule']['metal'] );
+		$crystal_prod		= eval ( $this->_prod_grid[$this->_element_id]['formule']['crystal'] );
+		$deuterium_prod		= eval ( $this->_prod_grid[$this->_element_id]['formule']['deuterium'] );
+		$energy_prod		= eval ( $this->_prod_grid[$this->_element_id]['formule']['energy'] );
 
 		// PRODUCTION
 		$Prod[1]			= Production_Lib::production_amount ( $metal_prod , $geologe_boost );
