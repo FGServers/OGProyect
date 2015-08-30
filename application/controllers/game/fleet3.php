@@ -296,6 +296,8 @@ class Fleet3 extends OGPCore
 		#####################################################################################################
 		// STAY / EXPEDITION BLOCKS
 		#####################################################################################################
+		$stay_row['options']	= '';
+
 		if ( $planet == 16 )
 		{
 			$stay_row['stay_type']			= 'expeditiontime';
@@ -309,9 +311,9 @@ class Fleet3 extends OGPCore
 				$stay_row['options']  .= parent::$page->parse_template ( $options_template , $stay );
 			}
 
-			$StayBlock .= parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
+			$StayBlock = parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
 		}
-		elseif ( isset( $missiontype[5] ) != '' )
+		elseif ( $missiontype[5] != '' )
 		{
 			$stay_row['stay_type']			= 'holdingtime';
 
@@ -325,11 +327,9 @@ class Fleet3 extends OGPCore
 				$stay_row['options']  .= parent::$page->parse_template ( $options_template , $stay );
 			}
 
-			$StayBlock .= parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
+			$StayBlock = parent::$page->parse_template ( $stay_template , array_merge ( $stay_row , $this->_lang ) );
 		}
 
-		$StayBlock = '';
-		
 		$parse['input_extra'] 			= $input_extra;
 		$parse['missionselector'] 		= $MissionSelector;
 		$parse['stayblock'] 			= $StayBlock;
